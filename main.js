@@ -34,20 +34,54 @@ $(document).ready(function() {
   $('.container').on('dblclick', '#door', function(event) {
     event.preventDefault();
     $(this).closest('.container').find('#message').text("Pulling harder won't help.  Find another way.");
+    console.log('door dbl click end');
   })
 
 /////////////////////////////////////////////////////////////////////////////
   /** operaitons when keys are clicked **/
+
+  /** KEY1 **/
   $('.container').on('click', '#key1', function(event) {
+    console.log('key1 start');
     key1 = true;
     $(this).css('display', 'none');
 
-    // var grab = function (location) {
-    //   $(locaiton).html("");
-    // }
+    var template = "<div class=\"keys\" id=\"key1\"><img src=\"images/key1\" alt=\"picture of key one\"></div>";
+    console.log(template);
+    $(this).closest('.container').find('#inv').html(template).append();
+    console.log('template placed');
+
+  });
+
+  /** KEY2 **/
+  $('.container').on('click', '#key2', function(event) {
+    console.log('key2 start');
+    key2 = true;
+    $(this).css('display', 'none');
+
+    var template = "<div class=\"keys\" id=\"key2\"><img src=\"images/key2\" alt=\"picture of key two\"></div>";
+    console.log(template);
+    $(this).closest('.container').find('#inv').html(template).append();
+    console.log('template placed');
+
+  });
+
+  /** KEY3 **/
+  $('.container').on('click', '#key3', function(event) {
+    console.log('key3 start');
+    key3 = true;
+    $(this).css('display', 'none');
+
+    var template = "<div class=\"keys\" id=\"key3\"><img src=\"images/key3\" alt=\"picture of key three\"></div>";
+    console.log(template);
+    $(this).closest('.container').find('#inv').html(template).append();
+    console.log('template placed');
+
   });
 
 /////////////////////////////////////////////////////////////////////////////
+
+
 
 //END OF READY
 });
