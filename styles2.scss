@@ -30,13 +30,13 @@ body {
 }
 
 .window {
-  position:absolute;
+  position:relative;
   display:inline-block;
-  width:300px;
+  width:259px;
   height:300px;
   top: 178px;
-  right: 200px;
-  background-image:url("http://placehold.it/300x300");
+  left: 665px;
+  background-image:url("images/window-01.png");
 }
 
 #lockers {
@@ -56,7 +56,8 @@ body {
   display:inline-block;
   width:300px;
   height:221px;
-  top:394px;
+  top:315px;
+  right: 265px;
   background-image:url("images/cold_fireplace.png");
   }
 
