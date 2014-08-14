@@ -133,7 +133,7 @@ console.log("k is " +k);
     k++;
     console.log('slide start');
     if (k === 1){
-      $(this).siblings('.key').fadeIn();
+      $(this).siblings('.key3').fadeIn();
       $(this).animate({margin: "-28px 0 0 -=10%"}, '-200');
       console.log('display key3 and slide plant');
     }
