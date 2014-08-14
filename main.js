@@ -52,7 +52,7 @@ $(document).ready(function() {
 
     var template = "<div class=\"keys\" id=\"key1\"><img src=\"images/key1.png\" alt=\"picture of key one\"></div>";
     console.log(template);
-    $(this).closest('.container').find('#inv').html(template).append();
+    $(this).closest('.container').find('#inv').append(template);
     console.log('template placed');
 
   });
@@ -66,7 +66,7 @@ $(document).ready(function() {
 
     var template = "<div class=\"keys\" id=\"key2\"><img src=\"images/key2.png\" alt=\"picture of key two\"></div>";
     console.log(template);
-    $(this).closest('.container').find('#inv').html(template).append();
+    $(this).closest('.container').find('#inv').append(template);
     console.log('template placed');
 
   });
@@ -80,7 +80,7 @@ $(document).ready(function() {
 
     var template = "<div class=\"keys\" id=\"key3\"><img src=\"images/key3.png\" alt=\"picture of key three\"></div>";
     console.log(template);
-    $(this).closest('.container').find('#inv').html(template).append();
+    $(this).closest('.container').find('#inv').append(template);
     console.log('template placed');
 
   });
@@ -89,36 +89,64 @@ $(document).ready(function() {
 
   /** Displaying hidden items **/
 var k = 0;
+var toilet = false;
+var trash = false;
+var plant = false;
+
+var styles = {  // This is a list of styles for the pot upon further clicks
+      transition: "0.5s",
+      transform: "rotate(-90deg)",
+      margin: "+=10px +0px +0px +0px"
+    };
 console.log("k is " +k);
   /** TOILET CLICK **/
   $('.container').on('click', '#toilet', function(event) {
     event.preventDefault();
-    k++;
-    console.log('Congrats, touched a digital toilet.');
-    $(this).children('.key').fadeIn();
-    console.log("k is " +k);
+    if (toilet === false) {
+      console.log('Congrats, touched a digital toilet.');
+      $(this).children('.key').fadeIn();
+      toilet = true;
+    }
+    else if (toilet === true) {
+      $(this).closest('.container').find('#message').text("The door is locked.  Find a way to open it");
+      toilet = 3;
+    }
+    else {
+      $(this).closest('.container').find('#message').text("Stop touching the toilet, thats weird.");
+    }
   });
 
   /** TRASH CLICK **/
   $('.container').on('click', '#trash', function(event) {
     event.preventDefault();
-    console.log('Sticky');
-    $(this).children('.key').fadeIn();
+    if (trash === false) {
+      console.log('Sticky');
+      $(this).children('.key').fadeIn();
+      trash = true;
+    }
+    else { }
   });
 
-  /** TRASH CLICK **/
+  /** SHELF CLICK **/
   $('#shelf').on('click', '.plantBox', function(event) {
     event.preventDefault();
     k++;
     console.log('slide start');
-    if (k < 3) {
+    if (k === 1){
+      $(this).siblings('.key').fadeIn();
+      $(this).animate({margin: "-28px 0 0 -=10%"}, '-200');
+      console.log('display key3 and slide plant');
+    }
+    else if (k === 2) {
       $(this).animate({margin: "-28px 0 0 -=10%"}, '-200');
       console.log('slide complete');
     }
-    else {
-      $(this).animate({transform: 'rotate(90deg)'}, 'slow');
+    else if (k === 3){
+      $(this).children('img').css(styles);
       console.log('pot fell over');
     }
+    else{}
+
   });
 
 //END OF READY
