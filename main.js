@@ -112,7 +112,7 @@ console.log("k is " +k);
     k++;
     console.log('slide start');
     if (k < 3) {
-      $(this).animate({margin: "0 0 0 -=10%"}, '-200');
+      $(this).animate({margin: "-28px 0 0 -=10%"}, '-200');
       console.log('slide complete');
     }
     else {
