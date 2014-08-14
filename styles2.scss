@@ -35,18 +35,19 @@ body {
   width:300px;
   height:300px;
   top: 178px;
-  right: 17px;
+  right: 200px;
   background-image:url("http://placehold.it/300x300");
 }
 
-.locker {
+.lockers {
   position:absolute;
   display:inline-block;
-  width:300px;
-  height:400px;
-  top: 226px;
-  left: 531px;
-  background-image:url("http://placehold.it/300x400");
+  width: 350px;
+  height: 552px;
+  top: 75px;
+  left: 427px;
+  background-image:url("images/final_open_locker_small.png");
+/*   transition: background-image 0.2s ease-in-out; */
 
 }
 
@@ -139,4 +140,13 @@ footer{
   background-color:gray;
   opacity:.5;
 
+}
+
+
+//KEYS
+
+.key {
+  display:none;
+  width:30%;
+  height:30%;
 }
