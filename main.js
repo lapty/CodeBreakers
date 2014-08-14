@@ -114,7 +114,6 @@ console.log("k is " +k);
       toilet = true;
     }
     else if (toilet === true) {
-      $(this).closest('.container').find('#message').text("The door is locked.  Find a way to open it");
       toilet = 3;
     }
     else {
