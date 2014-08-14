@@ -4,11 +4,14 @@ console.log('run');
 
 //functions to load when doc has fully loaded ///////////////////////////////
 $(document).ready(function() {
-  console.log('ready')
+  console.log('ready');
   /**  variables to be used later on**/
   var key1 = false;
   var key2 = false;
   var key3 = false;
+  var collect = function (item) {
+    $('#message').text("The " + item + " has been moved to your inventory.");
+  };
 
 /////////////////////////////////////////////////////////////////////////////
   /** Display content in the message div when DOOR is clicked **/
@@ -29,13 +32,13 @@ $(document).ready(function() {
       $(this).closest('.container').find('#message').text("The door is locked.  Find a way to open it");
       console.log("key1 " + key1 + ", key2 " + key2 + ", key3 " + key3);
     }
-  })
+  });
 //Double clicking the door does nothing
   $('.container').on('dblclick', '#door', function(event) {
     event.preventDefault();
     $(this).closest('.container').find('#message').text("Pulling harder won't help.  Find another way.");
     console.log('door dbl click end');
-  })
+  });
 
 /////////////////////////////////////////////////////////////////////////////
   /** operaitons when keys are clicked **/
@@ -45,6 +48,7 @@ $(document).ready(function() {
     console.log('key1 start');
     key1 = true;
     $(this).css('display', 'none');
+    collect('key');
 
     var template = "<div class=\"keys\" id=\"key1\"><img src=\"images/key1\" alt=\"picture of key one\"></div>";
     console.log(template);
@@ -58,6 +62,7 @@ $(document).ready(function() {
     console.log('key2 start');
     key2 = true;
     $(this).css('display', 'none');
+    collect('key');
 
     var template = "<div class=\"keys\" id=\"key2\"><img src=\"images/key2\" alt=\"picture of key two\"></div>";
     console.log(template);
@@ -71,6 +76,7 @@ $(document).ready(function() {
     console.log('key3 start');
     key3 = true;
     $(this).css('display', 'none');
+    collect('key');
 
     var template = "<div class=\"keys\" id=\"key3\"><img src=\"images/key3\" alt=\"picture of key three\"></div>";
     console.log(template);
@@ -81,7 +87,39 @@ $(document).ready(function() {
 
 /////////////////////////////////////////////////////////////////////////////
 
+  /** Displaying hidden items **/
+var k = 0;
+console.log("k is " +k);
+  /** TOILET CLICK **/
+  $('.container').on('click', '#toilet', function(event) {
+    event.preventDefault();
+    k++;
+    console.log('Congrats, touched a digital toilet.');
+    $(this).children('.key').fadeIn();
+    console.log("k is " +k);
+  });
 
+  /** TRASH CLICK **/
+  $('.container').on('click', '#trash', function(event) {
+    event.preventDefault();
+    console.log('Sticky');
+    $(this).children('.key').fadeIn();
+  });
+
+  /** TRASH CLICK **/
+  $('#shelf').on('click', '.plantBox', function(event) {
+    event.preventDefault();
+    k++;
+    console.log('slide start');
+    if (k < 3) {
+      $(this).animate({margin: "0 0 0 -=10%"}, '-200');
+      console.log('slide complete');
+    }
+    else {
+      $(this).animate({transform: 'rotate(90deg)'}, 'slow');
+      console.log('pot fell over');
+    }
+  });
 
 //END OF READY
 });
