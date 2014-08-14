@@ -1,6 +1,8 @@
 body {
   font-family:helvetica;
   font-size:1.5em;
+  background-image:url("images/stripes.png");
+
 }
 
 .container {
@@ -8,10 +10,12 @@ body {
   width:1000px;
   padding:0px;
   margin-left:10%;
+  border-radius:6px;
   margin-right:10%;
-  border:1px orange solid;
-  background-image:url("images/walls.jpg")
+  border:3px black solid;
+  background-image:url("images/walls.png");
 }
+
 
 #shelf {
   display:inline-block;
@@ -35,11 +39,11 @@ body {
 #door {
   display:inline-block;
   width:250px;
-  margin-top:100px;
+  margin-top:118px;
   margin-left:30px;
   background-image:url("images/door.png");
   background-repeat:no-repeat;
-  height:400px;
+  height:362px;
   border:1px red solid;
 }
 
@@ -54,12 +58,12 @@ body {
 }
 
 #toilet {
-  display: inline-block;
   width: 217px;
   height: 238px;
-  background-image:url("images/toilet.png");
+  margin-top:-217px;
+  background-image:url("images/toilet2.png");
   background-repeat:no-repeat;
-  margin-left:35%;
+  margin-left:78%;
   border:1px red solid;
   vertical-align:bottom;
 }
@@ -85,4 +89,21 @@ body {
   background-color:gray;
   opacity:.3;
   border:1px blue solid;
+}
+
+
+
+//KEYS
+
+.key {
+  display:none;
+  width:30%;
+  height:30%;
+}
+
+.key3 {
+  display:none;
+  margin-left: 52%;
+  margin-top: -47px;
+  width:20px;
 }
