@@ -1,3 +1,8 @@
+body {
+  font-family:helvetica;
+  font-size:1.5em;
+}
+
 .container {
   display:inline-block;
   width:1000px;
@@ -5,22 +10,24 @@
   margin-left:10%;
   margin-right:10%;
   border:1px orange solid;
+  background-image:url("images/walls.jpg")
 }
 
 #shelf {
   display:inline-block;
-  width:100%;
+  width:1000px;
+  position:absolute;
+  margin-top:30px;
+  background-image:url("images/shelf.png");
+  background-repeat:no-repeat;
   height:50px;
   border:1px red solid;
 }
 
 .plantBox {
-  width:60px;
-  height:50px;
-  background-image:url("http://placehold.it/60x50");
   display:inline-block;
-  background-color:green;
   margin-left:50%;
+  margin-top:-28px;
 }
 
 
@@ -30,6 +37,8 @@
   width:250px;
   margin-top:100px;
   margin-left:30px;
+  background-image:url("images/door.png");
+  background-repeat:no-repeat;
   height:400px;
   border:1px red solid;
 }
@@ -38,14 +47,18 @@
   display:inline-block;
   width: 127px;
   height: 120px;
+  background-image:url("images/trash.png");
+  background-repeat:no-repeat;
   border:1px red solid;
   vertical-align:bottom;
 }
 
 #toilet {
   display: inline-block;
-  width: 188px;
-  height: 177px;
+  width: 217px;
+  height: 238px;
+  background-image:url("images/toilet.png");
+  background-repeat:no-repeat;
   margin-left:35%;
   border:1px red solid;
   vertical-align:bottom;
@@ -69,5 +82,7 @@
   display:inline-block;
   width:100%;
   height:100px;
+  background-color:gray;
+  opacity:.3;
   border:1px blue solid;
 }
