@@ -9,6 +9,7 @@ $(document).ready(function() {
   var key1 = false;
   var key2 = false;
   var key3 = false;
+  var leave = false;
   var collect = function (item) {
     $('#message').text("The " + item + " has been moved to your inventory.");
   };
@@ -18,9 +19,14 @@ $(document).ready(function() {
   $('.container').on('click', '#door', function(event) {
     event.preventDefault();
     // IF ALL KEYS IN INV
-    if (key1 && key2 && key3) {
-      $(this).closest('.container').find('#message').text("Phew! You made it. Let's move on");
+    if (key1 && key2 && key3 && !leave) {
+      $(this).closest('.container').find('#message').text("Phew! You made it. Let's move on (click to leave)");
       console.log("key1 " + key1 + ", key2 " + key2 + ", key3 " + key3);
+      leave = true;
+    }
+    //Click again to leave room
+    else if (key1 && key2 && key3 && leave) {
+      window.location.href = 'scene2.html';
     }
     // IF ONE OR MORE KEYS IN INV
     else if (key1 || key2 || key3) {
@@ -108,7 +114,6 @@ console.log("k is " +k);
       toilet = true;
     }
     else if (toilet === true) {
-      $(this).closest('.container').find('#message').text("The door is locked.  Find a way to open it");
       toilet = 3;
     }
     else {
