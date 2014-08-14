@@ -66,7 +66,7 @@ $(document).ready(function() {
 
     var template = "<div class=\"keys\" id=\"key2\"><img src=\"images/key2\" alt=\"picture of key two\"></div>";
     console.log(template);
-    $(this).closest('.container').find('#inv').html(template).append();
+    $(this).closest('.container').find('#inv').append(template);
     console.log('template placed');
 
   });
@@ -80,7 +80,7 @@ $(document).ready(function() {
 
     var template = "<div class=\"keys\" id=\"key3\"><img src=\"images/key3\" alt=\"picture of key three\"></div>";
     console.log(template);
-    $(this).closest('.container').find('#inv').html(template).append();
+    $(this).closest('.container').find('#inv').append(template);
     console.log('template placed');
 
   });
