@@ -31,14 +31,14 @@ body {
   right: 200px;
   background-image: url("http://placehold.it/300x300"); }
 
-.lockers {
+#lockers {
   position: absolute;
   display: inline-block;
   width: 350px;
   height: 552px;
   top: 75px;
   left: 427px;
-  background-image: url("images/final_open_locker_small.png");
+  background-image: url("images/final_closed_locker_small.png");
   /*   transition: background-image 0.2s ease-in-out; */ }
 
 .fireplace {
@@ -114,3 +114,8 @@ footer {
   height: 100px;
   background-color: gray;
   opacity: 0.5; }
+
+.key {
+  display: none;
+  width: 30%;
+  height: 30%; }
