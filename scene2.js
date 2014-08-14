@@ -16,6 +16,7 @@ $(document).ready(function() {
   var key5inv = false;
   var bowl = false;
   var template = "";
+  var w = true;
   var message = function(string) {
     $('body').children('footer').find('#message').text(string);
   };
@@ -214,9 +215,11 @@ $(document).ready(function() {
       console.log('end mini-locker');
     }
     //If you have the keys to the lockers (key4 = true)
-    else if(key4 === true && !key4inv ) {
+    else if(key4 === true && !key4inv && w) {
+      w = false;
       console.log('key4: ' + key4 + ', key5: ' + key5);
       message('Locker opened.  Better hurry, this is Ansley\'s locker');
+      $(this).children('#lockers').css('background\-image', 'url(\"images/final_open_locker_small.png\")');
       $(this).children('#key5').fadeIn();
       console.log('end mini-locker');
     }
