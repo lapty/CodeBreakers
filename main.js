@@ -50,7 +50,7 @@ $(document).ready(function() {
     $(this).css('display', 'none');
     collect('key');
 
-    var template = "<div class=\"keys\" id=\"key1\"><img src=\"images/key1\" alt=\"picture of key one\"></div>";
+    var template = "<div class=\"keys\" id=\"key1\"><img src=\"images/key1.png\" alt=\"picture of key one\"></div>";
     console.log(template);
     $(this).closest('.container').find('#inv').append(template);
     console.log('template placed');
@@ -64,7 +64,7 @@ $(document).ready(function() {
     $(this).css('display', 'none');
     collect('key');
 
-    var template = "<div class=\"keys\" id=\"key2\"><img src=\"images/key2\" alt=\"picture of key two\"></div>";
+    var template = "<div class=\"keys\" id=\"key2\"><img src=\"images/key2.png\" alt=\"picture of key two\"></div>";
     console.log(template);
     $(this).closest('.container').find('#inv').append(template);
     console.log('template placed');
@@ -78,7 +78,7 @@ $(document).ready(function() {
     $(this).css('display', 'none');
     collect('key');
 
-    var template = "<div class=\"keys\" id=\"key3\"><img src=\"images/key3\" alt=\"picture of key three\"></div>";
+    var template = "<div class=\"keys\" id=\"key3\"><img src=\"images/key3.png\" alt=\"picture of key three\"></div>";
     console.log(template);
     $(this).closest('.container').find('#inv').append(template);
     console.log('template placed');
@@ -133,7 +133,7 @@ console.log("k is " +k);
     k++;
     console.log('slide start');
     if (k === 1){
-      $(this).siblings('.key').fadeIn();
+      $(this).siblings('.key3').fadeIn();
       $(this).animate({margin: "-28px 0 0 -=10%"}, '-200');
       console.log('display key3 and slide plant');
     }
