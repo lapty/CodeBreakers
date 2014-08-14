@@ -227,4 +227,9 @@ $(document).ready(function() {
     console.log('lockers end');
   });
 
+
+/////////////////////////////////////////////////////////////CHARLES' SECTION
+
+
+
 });
