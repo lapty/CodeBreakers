@@ -229,7 +229,9 @@ $(document).ready(function() {
 
 
 /////////////////////////////////////////////////////////////CHARLES' SECTION
-
+  $('.table').on("click", function (event) {
+    $(this).children(".laptop").children("#calvin").css('display','block');
+  })
 
 
 });
