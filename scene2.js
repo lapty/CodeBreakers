@@ -114,7 +114,7 @@ $(document).ready(function() {
     if (fireplace === false) {
       console.log('false dblclick fireplace start');
       fireplace = true;
-      $(this).sibling('#fireOn').fadeIn();
+      $(this).siblings('#fireOn').fadeIn();
       $(this).fadeOut();
       message("Jolly Ho! This room needed some warmth.");
       snips = true;
