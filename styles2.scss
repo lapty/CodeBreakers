@@ -10,7 +10,7 @@ body {
 .container {
   display:inline-block;
   width:1000px;
-  height:1300px;
+  height:1000px;
   padding:0px;
   margin-left:10%;
   border-radius:6px;
@@ -26,17 +26,28 @@ body {
   width:1000px;
   height:650px;
   padding:0px;
-  border:1px red solid;
+
 }
 
-.window {
+.logo {
   position:absolute;
   display:inline-block;
   width:300px;
   height:300px;
-  top: 178px;
-  right: 200px;
-  background-image:url("http://placehold.it/300x300");
+  right: 98px;
+top: 105px;
+
+  background-image:url("images/tiy_logo.png");
+}
+
+.window {
+  position:relative;
+  display:inline-block;
+  width:259px;
+  height:300px;
+  top: 38px;
+left: 26px;
+  background-image:url("images/bill.jpg");
 }
 
 #lockers {
@@ -51,68 +62,112 @@ body {
 
 }
 
-.fireplace {
+
+#fireOff {
   position:relative;
   display:inline-block;
   width:300px;
-  height:200px;
-  top:414px;
-  background-image:url("http://placehold.it/300x200");
+  height:221px;
+  top:88px;
+  background-image:url("images/cold_fireplace.png");
   }
+
+#fireOn {
+  position:relative;
+  width:300px;
+  height:221px;
+  top:88px;
+  display:none;
+  background-image:url("images/hot_fireplace.png");
+
+}
+
+
 
 .door {
   position:relative;
   display:inline-block;
-  width:40px;
+  width:72px;
   height:500px;
-  top: 115px;
   float:right;
-  background-image:url("http://placehold.it/40x500");
+  bottom: 403px;
+
+  background-image:url("images/doorclosed.png");
   }
+
 
 
 //FLOOR
 .floor{
   display:inline-block;
   width:1000px;
-  height:650px;
+  height:300px;
   padding:0px;
-  border:1px red solid;
+  position:relative;
+
 }
 
 .table {
   display:inline-block;
-  width:200px;
-  height:200px;
-  top:0px;
-  background-image:url("http://placehold.it/200x200");
-  }
+  width:300px;
+  height:300px;
+  background-image:url("images/desk_laptop-01.png");
+  background-repeat:no-repeat;
+  position: absolute;
+}
+
 
 
 .dogbowl {
   display:inline-block;
   float: right;
-  width:50px;
-  height:85px;
+  width:120px;
+  height:120px;
   top:0px;
-  background-image:url("http://placehold.it/50x85");
+  background-image:url("images/bowl.png");
+}
+
+.rug {
+display: inline-block;
+top: 100px;
+left:400px;
+width: 213px;
+height: 79px;
+position: absolute;
+border-radius:70%;
+background-image:url("images/rug.jpeg")
 }
 
 .snips {
   display:inline-block;
-  width:150px;
-  height:150px;
-  top:0px;
-  background-image:url("http://placehold.it/150x150");
+  position:relative;
+  top:-60px;
   }
 
+#asleep {
+  width:200px;
+  height:200px;
+  background-image:url("images/snips_down.png");
+  background-repeat:no-repeat;
+}
+
+#awake {
+  width:200px;
+  height:200px;
+  bottom: 70px;
+  position: relative;
+  background-image:url("images/snips_up.png");
+  background-repeat:no-repeat;
+  display:none;
+}
+
 .laptop {
-  display:inline-block;
-  width:100px;
-  height:80px;
-  top:414px;
-  border:1px red solid;
-  /* background-image:url("images/CALVIN.gif"); */
+  position: relative;
+  margin-top: 4px;
+  display: inline-block;
+  width: 112px;
+  height: 68px;
+  left: 92px;
 }
 
 
@@ -149,4 +204,17 @@ footer{
   display:none;
   width:30%;
   height:30%;
+}
+
+.keys {
+  display:inline-block;
+}
+
+#key5 {
+
+  width:30px;
+  height:40px;
+  top: 160px;
+right: 159px;
+position: absolute;
 }
