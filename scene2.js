@@ -1,22 +1,35 @@
 console.log('run scene 2');
 
+var door2 = false;
+var lockers = false;
+var fireplace = false;
+var snips = false;
+var snipsIs = 'unfed';
+var key4 = false;
+var key4inv = false;
+var key5 = false;
+var key5inv = false;
+var bowl = false;
+var template = "";
+var w = true;
+
 /** RUN ON DOCUMENT READY **/
 $(document).ready(function() {
 
   //////////////////////////////////////////////////////////////////
   /** VARIABLES TO USE, OR NOT TO USE **/
-  var door2 = false;
-  var lockers = false;
-  var fireplace = false;
-  var snips = false;
-  var snipsIs = 'unfed';
-  var key4 = false;
-  var key4inv = false;
-  var key5 = false;
-  var key5inv = false;
-  var bowl = false;
-  var template = "";
-  var w = true;
+  // var door2 = false;
+  // var lockers = false;
+  // var fireplace = false;
+  // var snips = false;
+  // var snipsIs = 'unfed';
+  // var key4 = false;
+  // var key4inv = false;
+  // var key5 = false;
+  // var key5inv = false;
+  // var bowl = false;
+  // var template = "";
+  // var w = true;
   var message = function(string) {
     $('body').children('footer').find('#message').text(string);
   };
@@ -80,7 +93,7 @@ $(document).ready(function() {
     $(this).css('display', 'none');
     collectSingular('key');
 
-    template = "<div class=\"keys\" id=\"key5\"><img src=\"images/key5\" alt=\"picture of key five\"></div>";
+    template = "<div class=\"keys\"><img src=\"images/key5.png\" alt=\"picture of key five\"></div>";
     $(this).closest('.container').siblings('footer').find('#inv').append(template);
     key5inv = true;
     console.log('template placed');
@@ -114,8 +127,8 @@ $(document).ready(function() {
     if (fireplace === false) {
       console.log('false dblclick fireplace start');
       fireplace = true;
-      $(this).sibling('#fireOn').fadeIn();
-      $(this).fadeOut();
+      $(this).css("display","none");
+      $(this).siblings('#fireOn').fadeIn();
       message("Jolly Ho! This room needed some warmth.");
       snips = true;
       $(this).closest('#wall').siblings('#floor').find('#asleep').css('display', 'none');
@@ -156,9 +169,9 @@ $(document).ready(function() {
     //fire is lit but snips is hungry
     else if (snips === true && snipsIs === 'fed' && !key4inv) {
       console.log('snips fed then awake start');
-      message("Woof Ruff Woof Woof *wag* bark! -- translation -- Its warm, you fed me, heres a key");
+      message("Woof Ruff Woof Woof *wag* bark! -- translation -- It\'s warm, you fed me, here\'s a key!");
       key4 = true;
-      template = "<div class=\"keys\" id=\"key4\"><img src=\"images/key4\" alt=\"picture of key one\"></div>";
+      template = "<div class=\"keys\" id=\"key4\"><img src=\"images/key4.png\" alt=\"picture of key one\"></div>";
       console.log('template made');
       $(this).closest('.container').siblings('footer').find('#inv').append(template);
       key4inv = true;
@@ -215,11 +228,11 @@ $(document).ready(function() {
       console.log('end mini-locker');
     }
     //If you have the keys to the lockers (key4 = true)
-    else if(key4 === true && !key4inv && w) {
+    else if(key4 && key4inv && w) {
       w = false;
       console.log('key4: ' + key4 + ', key5: ' + key5);
       message('Locker opened.  Better hurry, this is Ansley\'s locker');
-      $(this).children('#lockers').css('background\-image', 'url(\"images/final_open_locker_small.png\")');
+      $(this).css('background\-image', 'url(\"images/final_open_locker_small.png\")');
       $(this).children('#key5').fadeIn();
       console.log('end mini-locker');
     }

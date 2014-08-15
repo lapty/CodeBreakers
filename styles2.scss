@@ -51,25 +51,39 @@ body {
 
 }
 
-.fireplace {
+
+#fireOff {
   position:relative;
   display:inline-block;
   width:300px;
   height:221px;
-  top:315px;
-  right: 265px;
+  top:88px;
   background-image:url("images/cold_fireplace.png");
   }
+
+#fireOn {
+  position:relative;
+  width:300px;
+  height:221px;
+  top:88px;
+  display:none;
+  background-image:url("images/hot_fireplace.png");
+
+}
+
+
 
 .door {
   position:relative;
   display:inline-block;
   width:40px;
   height:500px;
-  top: 115px;
   float:right;
-  background-image:url("http://placehold.it/40x500");
+  bottom: 350px;
+  border:1px red solid;
+  background-image:url("images/door-01.png");
   }
+
 
 
 //FLOOR
@@ -78,6 +92,7 @@ body {
   width:1000px;
   height:300px;
   padding:0px;
+  position:relative;
   border:1px red solid;
 }
 
@@ -87,8 +102,7 @@ body {
   height:300px;
   background-image:url("images/desk_laptop-01.png");
   background-repeat:no-repeat;
-  position: relative;
-  bottom: 100px;
+  position: absolute;
 }
 
 
@@ -102,30 +116,49 @@ body {
   background-image:url("images/bowl.png");
 }
 
+.rug {
+display: inline-block;
+border: 1px red solid;
+top: 100px;
+left:400px;
+width: 213px;
+height: 79px;
+position: absolute;
+border-radius:70%;
+background-image:url("images/rug.jpeg")
+}
+
 .snips {
   display:inline-block;
-
-  top:0px;
-  background-image:url("images/snips_down.png");
-  background-repeat:no-repeat;
-
+  position:relative;
+  top:-60px;
   }
 
-.asleep {
+#asleep {
   width:200px;
   height:200px;
   background-image:url("images/snips_down.png");
   background-repeat:no-repeat;
 }
 
+#awake {
+  width:200px;
+  height:200px;
+  bottom: 70px;
+  position: relative;
+  background-image:url("images/snips_up.png");
+  background-repeat:no-repeat;
+  display:none;
+}
+
 .laptop {
   position: relative;
-margin-top: 4px;
+  margin-top: 4px;
   display: inline-block;
-width: 112px;
-height: 68px;
-left: 92px;
-border: 1px red solid;
+  width: 112px;
+  height: 68px;
+  left: 92px;
+  border: 1px red solid;
   /* background-image:url("images/CALVIN.gif"); */
 }
 
@@ -163,4 +196,17 @@ footer{
   display:none;
   width:30%;
   height:30%;
+}
+
+.keys {
+  display:inline-block;
+}
+
+#key5 {
+  border:1px red solid;
+  width:30px;
+  height:40px;
+  top: 160px;
+right: 159px;
+position: absolute;
 }
