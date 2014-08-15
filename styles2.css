@@ -19,17 +19,25 @@ body {
   display: inline-block;
   width: 1000px;
   height: 650px;
-  padding: 0px;
-  border: 1px red solid; }
+  padding: 0px; }
+
+.logo {
+  position: absolute;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  right: 98px;
+  top: 105px;
+  background-image: url("images/tiy_logo.png"); }
 
 .window {
   position: relative;
   display: inline-block;
   width: 259px;
   height: 300px;
-  top: 178px;
-  left: 665px;
-  background-image: url("images/window-01.png"); }
+  top: 38px;
+  left: 26px;
+  background-image: url("images/bill.jpg"); }
 
 #lockers {
   position: absolute;
@@ -60,20 +68,18 @@ body {
 .door {
   position: relative;
   display: inline-block;
-  width: 40px;
+  width: 72px;
   height: 500px;
   float: right;
-  bottom: 350px;
-  border: 1px red solid;
-  background-image: url("images/door-01.png"); }
+  bottom: 403px;
+  background-image: url("images/doorclosed.png"); }
 
 .floor {
   display: inline-block;
   width: 1000px;
   height: 300px;
   padding: 0px;
-  position: relative;
-  border: 1px red solid; }
+  position: relative; }
 
 .table {
   display: inline-block;
@@ -93,7 +99,6 @@ body {
 
 .rug {
   display: inline-block;
-  border: 1px red solid;
   top: 100px;
   left: 400px;
   width: 213px;
@@ -128,9 +133,7 @@ body {
   display: inline-block;
   width: 112px;
   height: 68px;
-  left: 92px;
-  border: 1px red solid;
-  /* background-image:url("images/CALVIN.gif"); */ }
+  left: 92px; }
 
 footer {
   position: fixed;
@@ -161,7 +164,6 @@ footer {
   display: inline-block; }
 
 #key5 {
-  border: 1px red solid;
   width: 30px;
   height: 40px;
   top: 160px;
