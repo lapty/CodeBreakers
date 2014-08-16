@@ -315,7 +315,7 @@ $(document).ready(function() {
   $('.logo').on("click", function (event) {
     message('The Iron Yard, where people come to cry silently.');
   });
-  
+
   $('.window').on("click", function (event) {
     message('Bill Murray is a cool guy, I guess.');
   });
