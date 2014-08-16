@@ -1,8 +1,7 @@
 body {
   font-family:helvetica;
   font-size:1.5em;
-  background-color:black;
-  /* background-image:url("images/stripes.png"); */
+  background-image:url("images/stripes.png");
 
 }
 /////////////EXPERIMENT
@@ -23,9 +22,9 @@ body {
   padding:0px;
   position:relative;
   margin-left:10%;
-  border-radius:6px;
+  border-radius:10px;
   margin-right:10%;
-  border:3px black solid;
+  border:5px black solid;
   background-image:url("images/walls.png");
 }
 

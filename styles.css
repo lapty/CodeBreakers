@@ -1,8 +1,7 @@
 body {
   font-family: helvetica;
   font-size: 1.5em;
-  background-color: black;
-  /* background-image:url("images/stripes.png"); */ }
+  background-image: url("images/stripes.png"); }
 
 .intro {
   position: absolute;
@@ -22,7 +21,7 @@ body {
   margin-left: 10%;
   border-radius: 10px;
   margin-right: 10%;
-  border: 10px black solid;
+  border: 5px black solid;
   background-image: url("images/walls.png"); }
 
 #shelf {
