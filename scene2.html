@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Can you escape the IRON YARD?</title>
 </head>
-<body>
+<body class="lightOn">
   <div class="container">
     <div class="walls" id="wall">
       <div class="logo"></div>
@@ -39,12 +39,14 @@
 
 <!--FJXED INVENTORY AT BOTTOM-->
   </div>
-<footer>
-    <div class="bottomWrap">
-      <div id="message">MESSAGE</div>
-      <div id="inv"></div>
-    </div>
-</footer>
+  <footer>
+      <div class="bottomWrap">
+        <div id="message">MESSAGE</div>
+        <div id="inv">
+          <progress value = "0" max="3"></progress>
+        </div>
+      </div>
+  </footer>
 
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
 <script src="scene2.js"></script>
