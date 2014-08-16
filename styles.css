@@ -1,7 +1,8 @@
 body {
   font-family: helvetica;
   font-size: 1.5em;
-  background-image: url("images/stripes.png"); }
+  background-color: black;
+  /* background-image:url("images/stripes.png"); */ }
 
 .intro {
   position: absolute;
@@ -19,9 +20,9 @@ body {
   padding: 0px;
   position: relative;
   margin-left: 10%;
-  border-radius: 6px;
+  border-radius: 10px;
   margin-right: 10%;
-  border: 3px black solid;
+  border: 10px black solid;
   background-image: url("images/walls.png"); }
 
 #shelf {
@@ -56,13 +57,14 @@ body {
   vertical-align: bottom; }
 
 #toilet {
+  display: inline-block;
+  position: absolute;
   width: 217px;
   height: 238px;
-  margin-top: -217px;
+  bottom: 119px;
+  right: 0px;
   background-image: url("images/toilet2.png");
-  background-repeat: no-repeat;
-  margin-left: 78%;
-  vertical-align: bottom; }
+  background-repeat: no-repeat; }
 
 #mirror {
   position: absolute;
@@ -105,6 +107,7 @@ body {
 
 #inv {
   display: inline-block;
+  position: relative;
   width: 100%;
   height: 100px;
   background-color: gray;
@@ -123,6 +126,7 @@ progress {
 
 .key {
   display: none;
+  position: relative;
   width: 30%;
   height: 30%; }
 
@@ -131,3 +135,7 @@ progress {
   margin-left: 52%;
   margin-top: -47px;
   width: 20px; }
+
+#key2 {
+  top: 60px;
+  left: 100px; }
