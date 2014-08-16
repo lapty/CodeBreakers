@@ -243,8 +243,17 @@ $(document).ready(function() {
 
 /////////////////////////////////////////////////////////////CHARLES' SECTION
   $('.table').on("click", function (event) {
-    $(this).children(".laptop").children("#calvin").css('display','block');
-  })
+    $(this).children(".laptop").children("#calvin").css('display','block')
+    message('Sweet moves.');
+  });
+
+  $('.logo').on("click", function (event) {
+    message('The Iron Yard, where people come to cry silently.');
+  });
+  
+  $('.window').on("click", function (event) {
+    message('Bill Murray is a cool guy, I guess.');
+  });
 
 
 });

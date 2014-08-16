@@ -4,21 +4,23 @@ body {
   background-image:url("images/stripes.png");
 
 }
-
-/* .intro {
+/////////////EXPERIMENT
+.intro {
   position:absolute;
-  width:1300px;
+  width:130px;
   height:665px;
   top:0px;
   left:0px;
   color:white;
   background-color:black;
-} */
+  opacity:.9;
+}
 
 .container {
   display:inline-block;
   width:1000px;
   padding:0px;
+  position:relative;
   margin-left:10%;
   border-radius:6px;
   margin-right:10%;
@@ -43,8 +45,6 @@ body {
   margin-left:50%;
   margin-top:-28px;
 }
-
-
 
 #door {
   display:inline-block;
@@ -84,16 +84,33 @@ body {
   left: 560px;
   width:126px;
   height:169px;
-  background-image:url("images/mirrror-01.png")
+  background-image:url("images/mirror2.png")
 }
 
 #sink {
   position:absolute;
-top: 320px;
-left: 547px;
-width: 152px;
-height: 202px;
+  top: 320px;
+  left: 547px;
+  width: 152px;
+  height: 202px;
   background-image:url("images/sink.png")
+}
+
+
+.roach {
+  position:absolute;
+  top: 479px;
+  left: 131px;
+  width:200px;
+  height:200px;
+  background-image:url("images/roach.png");
+  background-repeat:no-repeat;
+  transition: left 2s ease;
+
+}
+
+.roach:hover {
+  left:1000px;
 }
 
 //BOTTOM
