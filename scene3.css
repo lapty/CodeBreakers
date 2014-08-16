@@ -54,3 +54,6 @@ footer {
   height: 100px;
   background-color: gray;
   opacity: .5; }
+
+.hidden {
+  display: none; }

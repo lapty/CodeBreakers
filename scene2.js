@@ -12,6 +12,9 @@ var key5inv = false;
 var bowl = false;
 var template = "";
 var w = true;
+var progress = 0;
+var proString;
+var doorClick = false;
 
 /** RUN ON DOCUMENT READY **/
 $(document).ready(function() {
@@ -46,9 +49,24 @@ $(document).ready(function() {
     event.preventDefault();
     console.log('door attempt');
     // RUN  IF KEY5 IN INV
-    if (key5inv) {
+    if (key5inv && !doorClick) {
+
+      //Allows hyperlink to engage on below condition
+      doorClick = true;
+
       message("You're out, thank goodness.  That was getting strange.");
       console.log("key4inv: " + key4 + ", key5inv: " + key5);
+
+      progress++;
+      proString = progress.toString();
+      console.log(proString);
+      $(this).closest('.container').siblings('footer').children('.bottomWrap').find('progress').val(proString);
+      console.log('change progress bar');
+    }
+    //Run if key 5 is in inv and door has been clicked once.
+    else if (key5inv && doorClick) {
+      console.log('move to scene three');
+      window.location.href = 'scene3.html';
     }
     // IF KEY4 (the wrong key) IS IN INVENTORY BUT NOT KEY5
     else if (key4inv) {
@@ -98,6 +116,12 @@ $(document).ready(function() {
     key5inv = true;
     console.log('template placed');
     console.log('end key5 event');
+    //Increment progress by one
+    progress++;
+    proString = progress.toString();
+    console.log(proString);
+    $(this).closest('.container').siblings('footer').children('.bottomWrap').find('progress').val(proString);
+    console.log('change progress bar');
 
   });
 
@@ -176,6 +200,12 @@ $(document).ready(function() {
       $(this).closest('.container').siblings('footer').find('#inv').append(template);
       key4inv = true;
       console.log('snips awake unfed end');
+      //Increment progress by one
+      progress++;
+      proString = progress.toString();
+      console.log(proString);
+      $(this).closest('.container').siblings('footer').children('.bottomWrap').find('progress').val(proString);
+      console.log('change progress bar');
     }
     //fire is lit but snips is hungry
     else if (snips === true && snipsIs === 'unfed') {
@@ -238,6 +268,41 @@ $(document).ready(function() {
     }
     else {}
     console.log('lockers end');
+  });
+
+/////////////////////////////////////////////////////////////
+/** RANDOM EVENTS **/
+
+  /** DARKEN ROOM **/
+  $('#wall').on('click', '.logo', function (event) {
+    event.preventDefault();
+    console.log('light off');
+    $(this).closest("#wall").parent(".container").parent('body').addClass('lightOff');
+    $(this).closest("#wall").parent(".container").addClass('darken');
+    $(this).closest("#wall").parent(".container").find('#lockers').fadeOut();
+    $(this).closest("#wall").parent(".container").find('#fireOff').fadeOut();
+    $(this).closest("#wall").parent(".container").find('#lockers').fadeOut();
+    $(this).closest("#wall").parent(".container").find('#door').fadeOut();
+    $(this).closest("#wall").parent(".container").find('.window').fadeOut();
+    $(this).closest(".container").children('#floor').find('#bowl').fadeOut();
+    $(this).closest(".container").children('#floor').find('.table').fadeOut();
+    $(this).closest(".container").children('#floor').find('.rug').fadeOut();
+    $(this).closest("#wall").parent(".container").parent('body').removeClass('lightOn');
+  });
+  $('#wall').on('dblclick', '.logo', function (event) {
+    event.preventDefault();
+    console.log('light on');
+    $(this).closest("#wall").parent(".container").parent('body').addClass('lightOn');
+    $(this).closest("#wall").parent(".container").removeClass('darken');
+    $(this).closest("#wall").parent(".container").find('#lockers').fadeIn();
+    $(this).closest("#wall").parent(".container").find('#fireOff').fadeIn();
+    $(this).closest("#wall").parent(".container").find('#lockers').fadeIn();
+    $(this).closest("#wall").parent(".container").find('#door').fadeIn();
+    $(this).closest("#wall").parent(".container").find('.window').fadeIn();
+    $(this).closest(".container").children('#floor').find('#bowl').fadeIn();
+    $(this).closest(".container").children('#floor').find('.table').fadeIn();
+    $(this).closest(".container").children('#floor').find('.rug').fadeIn();
+    $(this).closest("#wall").parent(".container").parent('body').removeClass('lightOff');
   });
 
 
