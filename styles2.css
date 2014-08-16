@@ -1,4 +1,11 @@
-body {
+.lightOff {
+  font-family: helvetica;
+  font-size: 1.5em;
+  color: red;
+  background-image: none;
+  background-color: black; }
+
+.lightOn {
   font-family: helvetica;
   font-size: 1.5em;
   color: red;
@@ -14,6 +21,9 @@ body {
   margin-right: 10%;
   border: 3px black solid;
   background-image: url("images/scene2bg.jpg"); }
+
+.darken {
+  background: rgba(0, 0, 0, 0.5); }
 
 .walls {
   display: inline-block;
@@ -154,7 +164,15 @@ footer {
   width: 100%;
   height: 100px;
   background-color: gray;
-  opacity: 0.5; }
+  opacity: .5; }
+
+progress {
+  background-color: green;
+  border: 2px solid black;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 3px;
+  right: 3px; }
 
 .key {
   display: none;
