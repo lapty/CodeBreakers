@@ -1,0 +1,199 @@
+.lightOff {
+  font-family: helvetica;
+  font-size: 1.5em;
+  color: red;
+  background-image: none;
+  background-color: black; }
+
+.lightOn {
+  font-family: helvetica;
+  font-size: 1.5em;
+  color: red;
+  background-image: url("images/stripes.png"); }
+
+.container {
+  display: inline-block;
+  width: 1000px;
+  height: 1000px;
+  padding: 0px;
+  margin-left: 10%;
+  border-radius: 6px;
+  margin-right: 10%;
+  border: 3px black solid;
+  background-image: url("images/scene2bg.jpg"); }
+
+.darken {
+  background: rgba(0, 0, 0, 0.5); }
+
+.walls {
+  display: inline-block;
+  position: relative;
+  width: 1000px;
+  height: 650px;
+  padding: 0px; }
+
+.logo {
+  position: absolute;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  right: 44px;
+  top: 105px;
+  background-image: url("images/tiy_logo.png"); }
+
+.window {
+  position: relative;
+  display: inline-block;
+  width: 259px;
+  height: 300px;
+  top: 38px;
+  left: 26px;
+  background-image: url("images/bill.jpg"); }
+
+#lockers {
+  position: absolute;
+  display: inline-block;
+  width: 350px;
+  height: 552px;
+  top: 66px;
+  left: 327px;
+  background-image: url("images/final_closed_locker_small.png");
+  /*   transition: background-image 0.2s ease-in-out; */ }
+
+#fireOff {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 221px;
+  top: 90px;
+  background-image: url("images/cold_fireplace.png"); }
+
+#fireOn {
+  position: relative;
+  width: 300px;
+  height: 221px;
+  top: 90px;
+  display: none;
+  background-image: url("images/hot_fireplace.png"); }
+
+.door {
+  position: relative;
+  display: inline-block;
+  width: 72px;
+  height: 480px;
+  float: right;
+  bottom: 396px;
+  background-image: url("images/doorclosed.png"); }
+
+.doorOpen {
+  position: relative;
+  display: inline-block;
+  width: 196px;
+  height: 500px;
+  float: right;
+  bottom: 349px;
+  background-image: url("images/door_big.png"); }
+
+.floor {
+  display: inline-block;
+  width: 1000px;
+  height: 300px;
+  padding: 0px;
+  position: relative; }
+
+.table {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  background-image: url("images/desk_laptop-01.png");
+  background-repeat: no-repeat;
+  position: absolute; }
+
+.dogbowl {
+  display: inline-block;
+  float: right;
+  width: 120px;
+  height: 120px;
+  top: 0px;
+  background-image: url("images/bowl.png"); }
+
+.rug {
+  display: inline-block;
+  top: 100px;
+  left: 400px;
+  width: 213px;
+  height: 79px;
+  position: absolute;
+  border-radius: 70%;
+  background-image: url("images/rug.jpeg"); }
+
+.snips {
+  display: inline-block;
+  position: relative;
+  top: -60px; }
+
+#asleep {
+  width: 200px;
+  height: 200px;
+  background-image: url("images/snips_down.png");
+  background-repeat: no-repeat; }
+
+#awake {
+  width: 200px;
+  height: 200px;
+  bottom: 70px;
+  position: relative;
+  background-image: url("images/snips_up.png");
+  background-repeat: no-repeat;
+  display: none; }
+
+.laptop {
+  position: relative;
+  margin-top: 4px;
+  display: inline-block;
+  width: 112px;
+  height: 68px;
+  left: 92px; }
+
+footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 130px;
+  width: 100%; }
+
+#message {
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+  text-align: center; }
+
+#inv {
+  display: inline-block;
+  width: 100%;
+  height: 100px;
+  background-color: gray;
+  opacity: 0.5; }
+
+progress {
+  background-color: green;
+  border: 2px solid black;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 3px;
+  right: 3px; }
+
+.key {
+  display: none;
+  width: 30%;
+  height: 30%; }
+
+.keys {
+  display: inline-block; }
+
+#key5 {
+  width: 30px;
+  height: 40px;
+  top: 160px;
+  right: 159px;
+  position: absolute; }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles2.css">
+  <meta charset="UTF-8">
+  <title>Can you escape the IRON YARD?</title>
+</head>
+<body class="lightOn">
+  <div class="container">
+    <div class="walls" id="wall">
+      <div class="logo"></div>
+      <div class="window"></div>
+      <div class="lockers" id="lockers">
+        <img src="images/key5.png" id="key5" class="key">
+      </div>
+        <img src="images/key4.png" id="key4" class="key">
+      <div class="fireplace" id="fireplace">
+        <div id="fireOn"></div>
+        <div id="fireOff"></div>
+      </div>
+      <div class="door" id="door"></div>
+    </div>
+
+    <div class="floor" id="floor">
+        <div class="dogbowl" id="bowl"></div>
+
+      <div class="table">
+        <div class="laptop">
+        <img id="calvin" style="display:none;" src="images/CALVIN.gif" width="110" height="64">
+      </div>
+      </div>
+      <div class="rug">
+        <div class="snips" id="snips">
+          <div id="awake"></div>
+          <div id="asleep"></div>
+      </div>
+    </div>
+    </div>
+
+<!--FJXED INVENTORY AT BOTTOM-->
+  </div>
+  <footer>
+      <div class="bottomWrap">
+        <div id="message">MESSAGE</div>
+        <div id="inv">
+          <progress value = "0" max="3"></progress>
+        </div>
+      </div>
+  </footer>
+
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+<script src="scene2.js"></script>
+</body>
+</html>

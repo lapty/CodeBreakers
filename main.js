@@ -10,9 +10,12 @@ $(document).ready(function() {
   var key2 = false;
   var key3 = false;
   var leave = false;
+  var progress = 0;
+  var proString;
   var collect = function (item) {
     $('#message').text("The " + item + " has been moved to your inventory.");
   };
+
 
 /////////////////////////////////////////////////////////////////////////////
   /** Display content in the message div when DOOR is clicked **/
@@ -23,6 +26,11 @@ $(document).ready(function() {
       $(this).closest('.container').find('#message').text("Phew! You made it. Let's move on (click to leave)");
       console.log("key1 " + key1 + ", key2 " + key2 + ", key3 " + key3);
       leave = true;
+      progress++;
+      proString = progress.toString();
+      console.log(proString);
+      $(this).closest('.container').children('.bottomWrap').find('progress').val(proString);
+      console.log('change progress bar');
     }
     //Click again to leave room
     else if (key1 && key2 && key3 && leave) {
@@ -60,6 +68,11 @@ $(document).ready(function() {
     console.log(template);
     $(this).closest('.container').find('#inv').append(template);
     console.log('template placed');
+    progress++;
+    proString = progress.toString();
+    console.log(proString);
+    $(this).closest('.container').children('.bottomWrap').find('progress').val(proString);
+    console.log('change progress bar');
 
   });
 
@@ -74,6 +87,11 @@ $(document).ready(function() {
     console.log(template);
     $(this).closest('.container').find('#inv').append(template);
     console.log('template placed');
+    progress++;
+    proString = progress.toString();
+    console.log(proString);
+    $(this).closest('.container').children('.bottomWrap').find('progress').val(proString);
+    console.log('change progress bar');
 
   });
 
@@ -88,6 +106,11 @@ $(document).ready(function() {
     console.log(template);
     $(this).closest('.container').find('#inv').append(template);
     console.log('template placed');
+    progress++;
+    proString = progress.toString();
+    console.log(proString);
+    $(this).closest('.container').children('.bottomWrap').find('progress').val(proString);
+    console.log('change progress bar');
 
   });
 
@@ -114,7 +137,6 @@ console.log("k is " +k);
       toilet = true;
     }
     else if (toilet === true) {
-      $(this).closest('.container').find('#message').text("The door is locked.  Find a way to open it");
       toilet = 3;
     }
     else {
@@ -154,6 +176,16 @@ console.log("k is " +k);
     else{}
 
   });
+
+/////////////////////////////////////////////////////////////CHARLES' SECTION
+    $('#mirror').on('click', function(event){
+      $(this).css('background-image', 'url(images/mirrror-01.png)'),
+      $(this).closest('.container').find('#message').text("You broke the mirror. Good job.");
+    });
+
+    $('#sink').on('click', function(event){
+      $(this).closest('.container').find('#message').text("Will Gallop doesn't wash his hands.")
+    });
 
 //END OF READY
 });
