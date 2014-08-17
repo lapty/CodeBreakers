@@ -82,7 +82,7 @@
   width: 72px;
   height: 480px;
   float: right;
-  bottom: 396px;
+  bottom: 391px;
   background-image: url("images/doorclosed.png"); }
 
 .doorOpen {
@@ -115,7 +115,8 @@
   width: 120px;
   height: 120px;
   top: 0px;
-  background-image: url("images/bowl.png"); }
+  background-image: url("images/bowl.png");
+  transition: background-image 2s ease; }
 
 .rug {
   display: inline-block;

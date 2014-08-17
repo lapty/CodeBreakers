@@ -38,7 +38,7 @@ $(document).ready(function() {
     }
     // IF ONE OR MORE KEYS IN INV
     else if (key1 || key2 || key3) {
-      $(this).closest('.container').find('#message').text("The door is only partially unlocked and will not open");
+      $(this).closest('.container').find('#message').text("The door is only partially unlocked and will not open.");
       console.log("key1 " + key1 + ", key2 " + key2 + ", key3 " + key3);
     }
     // IF NO KEYS IN INV
@@ -132,7 +132,8 @@ console.log("k is " +k);
   $('.container').on('click', '#toilet', function(event) {
     event.preventDefault();
     if (toilet === false) {
-      console.log('Congrats, touched a digital toilet.');
+      console.log('Congrats, you touched a digital toilet.');
+      $(this).closest('.container').find('#message').text("You put your hand in the toilet. Someone forgot to flush.");
       $(this).children('.key').fadeIn();
       toilet = true;
     }
@@ -140,7 +141,7 @@ console.log("k is " +k);
       toilet = 3;
     }
     else {
-      $(this).closest('.container').find('#message').text("Stop touching the toilet, thats weird.");
+      $(this).closest('.container').find('#message').text("Stop touching the toilet, that's weird.");
     }
   });
 
@@ -149,6 +150,7 @@ console.log("k is " +k);
     event.preventDefault();
     if (trash === false) {
       console.log('Sticky');
+      $(this).closest('.container').find('#message').text("Another man's treasure.");
       $(this).children('.key').fadeIn();
       trash = true;
     }
@@ -185,6 +187,15 @@ console.log("k is " +k);
 
     $('#sink').on('click', function(event){
       $(this).closest('.container').find('#message').text("Will Gallop doesn't wash his hands.")
+    });
+
+    $('.spider').on('click', function(event){
+      $(this).closest('.container').find('#message').text("Leave his home alone.")
+    });
+
+    $('.roach').on('click', function(event) {
+      $(this).closest('.container').find('#message').text("You crushed the cockroach and ate it.");
+      $(this).css('display','none');
     });
 
 //END OF READY
