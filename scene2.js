@@ -255,7 +255,7 @@ $(document).ready(function() {
     //IF you do not have the key to the lockers (key4 = false)
     if (key4 === false) {
       console.log('key4: ' + key4 + ', key5: ' + key5);
-      message('[Locked]');
+      message('The locker is locked.');
       console.log('end mini-locker');
     }
     //If you have the keys to the lockers (key4 = true)
@@ -321,5 +321,8 @@ $(document).ready(function() {
     message('Bill Murray is a cool guy, I guess.');
   });
 
+  $('.container').children('#floor').on('click', '.dogbowl', function (event) {
+    $(this).css('background-image', 'url(images/bowlfull.png)');
+  });
 
 });

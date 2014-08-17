@@ -104,7 +104,7 @@ left: 26px;
   width:72px;
   height:480px;
   float:right;
-  bottom: 396px;
+  bottom: 391px;
 
   background-image:url("images/doorclosed.png");
   }
@@ -150,6 +150,7 @@ left: 26px;
   height:120px;
   top:0px;
   background-image:url("images/bowl.png");
+  transition:background-image 2s ease;
 }
 
 .rug {
