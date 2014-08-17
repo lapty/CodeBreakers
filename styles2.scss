@@ -87,10 +87,10 @@ left: 26px;
   }
 
 #fireOn {
-  position:relative;
+  position:absolute;
   width:300px;
   height:221px;
-  top:90px;
+  top:395px;
   display:none;
   background-image:url("images/hot_fireplace.png");
 
@@ -99,23 +99,25 @@ left: 26px;
 
 
 .door {
-  position:relative;
+  position:absolute;
   display:inline-block;
   width:72px;
   height:480px;
   float:right;
-  bottom: 396px;
+  bottom: 34px;
+  right:0;
 
   background-image:url("images/doorclosed.png");
   }
 
 .doorOpen {
-  position:relative;
+  position:absolute;
   display:inline-block;
   width:196px;
   height:500px;
   float:right;
-  bottom: 349px;
+  right:0;
+  bottom: -35px;
 
   background-image:url("images/door_big.png");
   }
@@ -150,6 +152,7 @@ left: 26px;
   height:120px;
   top:0px;
   background-image:url("images/bowl.png");
+  transition:background-image 2s ease;
 }
 
 .rug {

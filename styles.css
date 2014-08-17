@@ -1,7 +1,8 @@
 body {
   font-family: helvetica;
   font-size: 1.5em;
-  background-image: url("images/stripes.png"); }
+  background-image: url("images/stripes.png");
+  color: red; }
 
 .intro {
   position: absolute;
@@ -16,6 +17,7 @@ body {
 .container {
   display: inline-block;
   width: 1000px;
+  height: 632px;
   padding: 0px;
   position: relative;
   margin-left: 10%;
@@ -32,6 +34,13 @@ body {
   background-image: url("images/shelf.png");
   background-repeat: no-repeat;
   height: 50px; }
+  #shelf .spider {
+    background-image: url("images/spider-01.png");
+    position: absolute;
+    width: 126px;
+    height: 169px;
+    top: 14px;
+    right: 0px; }
 
 .plantBox {
   display: inline-block;
@@ -49,9 +58,11 @@ body {
 
 #trash {
   display: inline-block;
-  width: 127px;
-  height: 120px;
-  background-image: url("images/garbage-01.png");
+  position: absolute;
+  bottom: 124px;
+  width: 121px;
+  height: 130px;
+  background-image: url("images/trash.png");
   background-repeat: no-repeat;
   vertical-align: bottom; }
 
@@ -96,12 +107,13 @@ body {
 
 .bottomWrap {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  height: 142px; }
 
 #message {
   display: inline-block;
   width: 100%;
-  height: 30px;
+  height: 40px;
   text-align: center; }
 
 #inv {
@@ -135,6 +147,12 @@ progress {
   margin-top: -47px;
   width: 20px; }
 
+#key1 {
+  bottom: 27px;
+  left: 44px; }
+
 #key2 {
   top: 60px;
-  left: 100px; }
+  left: 100px;
+  width: 27px;
+  height: 50px; }
