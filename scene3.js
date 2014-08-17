@@ -22,9 +22,8 @@ $(document).ready(function() {
     if (code === '7257') {
       alert('You\'ve made it out alive, but without your dignity');
       console.log('move to win');
-      $(this).closest('form').siblings('img').fadeOut();
-      $(this).closest('form').fadeOut();
-      $(this).closest('form').siblings('iframe').removeClass('hidden');
+      console.log('back to level 1');
+      window.location.href = 'http://coastalexpeditions.com/';
     }
     else {
       alert('Wrong');
