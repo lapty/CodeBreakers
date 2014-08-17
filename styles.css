@@ -3,23 +3,25 @@ body {
   font-size: 1.5em;
   background-image: url("images/stripes.png"); }
 
-/* .intro {
-  position:absolute;
-  width:1300px;
-  height:665px;
-  top:0px;
-  left:0px;
-  color:white;
-  background-color:black;
-} */
+.intro {
+  position: absolute;
+  width: 130px;
+  height: 665px;
+  top: 0px;
+  left: 0px;
+  color: white;
+  background-color: black;
+  opacity: 0.9; }
+
 .container {
   display: inline-block;
   width: 1000px;
   padding: 0px;
+  position: relative;
   margin-left: 10%;
-  border-radius: 6px;
+  border-radius: 10px;
   margin-right: 10%;
-  border: 3px black solid;
+  border: 5px black solid;
   background-image: url("images/walls.png"); }
 
 #shelf {
@@ -54,13 +56,14 @@ body {
   vertical-align: bottom; }
 
 #toilet {
+  display: inline-block;
+  position: absolute;
   width: 217px;
   height: 238px;
-  margin-top: -217px;
+  bottom: 119px;
+  right: 0px;
   background-image: url("images/toilet2.png");
-  background-repeat: no-repeat;
-  margin-left: 78%;
-  vertical-align: bottom; }
+  background-repeat: no-repeat; }
 
 #mirror {
   position: absolute;
@@ -68,7 +71,7 @@ body {
   left: 560px;
   width: 126px;
   height: 169px;
-  background-image: url("images/mirrror-01.png"); }
+  background-image: url("images/mirror2.png"); }
 
 #sink {
   position: absolute;
@@ -77,6 +80,19 @@ body {
   width: 152px;
   height: 202px;
   background-image: url("images/sink.png"); }
+
+.roach {
+  position: absolute;
+  top: 479px;
+  left: 131px;
+  width: 200px;
+  height: 200px;
+  background-image: url("images/roach.png");
+  background-repeat: no-repeat;
+  transition: left 2s ease; }
+
+.roach:hover {
+  left: 1000px; }
 
 .bottomWrap {
   position: relative;
@@ -90,6 +106,7 @@ body {
 
 #inv {
   display: inline-block;
+  position: relative;
   width: 100%;
   height: 100px;
   background-color: gray;
@@ -108,6 +125,7 @@ progress {
 
 .key {
   display: none;
+  position: relative;
   width: 30%;
   height: 30%; }
 
@@ -116,3 +134,7 @@ progress {
   margin-left: 52%;
   margin-top: -47px;
   width: 20px; }
+
+#key2 {
+  top: 60px;
+  left: 100px; }

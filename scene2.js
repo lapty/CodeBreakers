@@ -53,7 +53,8 @@ $(document).ready(function() {
 
       //Allows hyperlink to engage on below condition
       doorClick = true;
-
+      $('.door').addClass("doorOpen");
+      $('.door').removeClass("door");
       message("You're out, thank goodness.  That was getting strange.");
       console.log("key4inv: " + key4 + ", key5inv: " + key5);
 
@@ -70,7 +71,7 @@ $(document).ready(function() {
     }
     // IF KEY4 (the wrong key) IS IN INVENTORY BUT NOT KEY5
     else if (key4inv) {
-      message("The door is only partially unlocked and will not open");
+      message("The key doesn't fit.");
       console.log("key4inv: " + key4 + ", key5inv: " + key5);
     }
     // IF NO KEYS IN INV
@@ -308,8 +309,17 @@ $(document).ready(function() {
 
 /////////////////////////////////////////////////////////////CHARLES' SECTION
   $('.table').on("click", function (event) {
-    $(this).children(".laptop").children("#calvin").css('display','block');
-  })
+    $(this).children(".laptop").children("#calvin").css('display','block')
+    message('Sweet moves.');
+  });
+
+  $('.logo').on("click", function (event) {
+    message('The Iron Yard, where people come to cry silently.');
+  });
+
+  $('.window').on("click", function (event) {
+    message('Bill Murray is a cool guy, I guess.');
+  });
 
 
 });

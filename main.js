@@ -16,6 +16,7 @@ $(document).ready(function() {
     $('#message').text("The " + item + " has been moved to your inventory.");
   };
 
+
 /////////////////////////////////////////////////////////////////////////////
   /** Display content in the message div when DOOR is clicked **/
   $('.container').on('click', '#door', function(event) {
@@ -177,6 +178,14 @@ console.log("k is " +k);
   });
 
 /////////////////////////////////////////////////////////////CHARLES' SECTION
+    $('#mirror').on('click', function(event){
+      $(this).css('background-image', 'url(images/mirrror-01.png)'),
+      $(this).closest('.container').find('#message').text("You broke the mirror. Good job.");
+    });
+
+    $('#sink').on('click', function(event){
+      $(this).closest('.container').find('#message').text("Will Gallop doesn't wash his hands.")
+    });
 
 //END OF READY
 });
