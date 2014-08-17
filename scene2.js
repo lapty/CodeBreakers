@@ -15,6 +15,7 @@ var w = true;
 var progress = 0;
 var proString;
 var doorClick = false;
+var lights = 'on';
 
 /** RUN ON DOCUMENT READY **/
 $(document).ready(function() {
@@ -255,7 +256,7 @@ $(document).ready(function() {
     //IF you do not have the key to the lockers (key4 = false)
     if (key4 === false) {
       console.log('key4: ' + key4 + ', key5: ' + key5);
-      message('The locker is locked.');
+      message('[LOCKED]');
       console.log('end mini-locker');
     }
     //If you have the keys to the lockers (key4 = true)
@@ -278,32 +279,47 @@ $(document).ready(function() {
   $('#wall').on('click', '.logo', function (event) {
     event.preventDefault();
     console.log('light off');
-    $(this).closest("#wall").parent(".container").parent('body').addClass('lightOff');
-    $(this).closest("#wall").parent(".container").addClass('darken');
-    $(this).closest("#wall").parent(".container").find('#lockers').fadeOut();
-    $(this).closest("#wall").parent(".container").find('#fireOff').fadeOut();
-    $(this).closest("#wall").parent(".container").find('#lockers').fadeOut();
-    $(this).closest("#wall").parent(".container").find('#door').fadeOut();
-    $(this).closest("#wall").parent(".container").find('.window').fadeOut();
-    $(this).closest(".container").children('#floor').find('#bowl').fadeOut();
-    $(this).closest(".container").children('#floor').find('.table').fadeOut();
-    $(this).closest(".container").children('#floor').find('.rug').fadeOut();
-    $(this).closest("#wall").parent(".container").parent('body').removeClass('lightOn');
+    //setting this condition to make fix problem with lights being double clicked while still on
+    if (lights === 'on')
+      {
+      $(this).closest("#wall").parent(".container").parent('body').addClass('lightOff');
+      $(this).closest("#wall").parent(".container").addClass('darken');
+      $(this).closest("#wall").parent(".container").find('#lockers').fadeOut();
+      $(this).closest("#wall").parent(".container").find('#lockers').fadeOut();
+      $(this).closest("#wall").parent(".container").find('#door').fadeOut();
+      $(this).closest("#wall").parent(".container").find('.window').fadeOut();
+      $(this).closest(".container").children('#floor').find('#bowl').fadeOut();
+      $(this).closest(".container").children('#floor').find('.table').fadeOut();
+      $(this).closest(".container").children('#floor').find('.rug').fadeOut();
+      $(this).closest("#wall").parent(".container").parent('body').removeClass('lightOn');
+      if (!fireplace) {
+        $(this).closest("#wall").parent(".container").find('#fireOff').fadeOut();
+      }
+      //set lights to off to make turning them on available.
+      lights = 'off';
+    }
   });
   $('#wall').on('dblclick', '.logo', function (event) {
     event.preventDefault();
     console.log('light on');
-    $(this).closest("#wall").parent(".container").parent('body').addClass('lightOn');
-    $(this).closest("#wall").parent(".container").removeClass('darken');
-    $(this).closest("#wall").parent(".container").find('#lockers').fadeIn();
-    $(this).closest("#wall").parent(".container").find('#fireOff').fadeIn();
-    $(this).closest("#wall").parent(".container").find('#lockers').fadeIn();
-    $(this).closest("#wall").parent(".container").find('#door').fadeIn();
-    $(this).closest("#wall").parent(".container").find('.window').fadeIn();
-    $(this).closest(".container").children('#floor').find('#bowl').fadeIn();
-    $(this).closest(".container").children('#floor').find('.table').fadeIn();
-    $(this).closest(".container").children('#floor').find('.rug').fadeIn();
-    $(this).closest("#wall").parent(".container").parent('body').removeClass('lightOff');
+    if (lights === 'off')
+      {
+      $(this).closest("#wall").parent(".container").parent('body').addClass('lightOn');
+      $(this).closest("#wall").parent(".container").removeClass('darken');
+      $(this).closest("#wall").parent(".container").find('#lockers').fadeIn();
+      $(this).closest("#wall").parent(".container").find('#lockers').fadeIn();
+      $(this).closest("#wall").parent(".container").find('#door').fadeIn();
+      $(this).closest("#wall").parent(".container").find('.window').fadeIn();
+      $(this).closest(".container").children('#floor').find('#bowl').fadeIn();
+      $(this).closest(".container").children('#floor').find('.table').fadeIn();
+      $(this).closest(".container").children('#floor').find('.rug').fadeIn();
+      $(this).closest("#wall").parent(".container").parent('body').removeClass('lightOff');
+      if (!fireplace) {
+        $(this).closest("#wall").parent(".container").find('#fireOff').fadeIn();
+      }
+      //Sets condition so that lights can only be double clicked while it is dark.
+      lights = 'on';
+    }
   });
 
 
