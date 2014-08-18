@@ -1,52 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <link rel="stylesheet" href="styles.css">
   <meta charset="UTF-8">
   <title>Can you escape The Iron Yard?</title>
-
-<!--Adds HTML sound effects-->
-  <script>
-function playSound(soundfile) {
-  document.getElementById("sound").innerHTML=
-    "<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
-}
-</script>
-
 </head>
-  <body>
+<body>
 
-    <div class="container">
-    <div id="shelf">
-        <div class="plantBox">
-          <img src="images/plant.png" width=70px height=60px>
-            </div>
-        <img src="images/key3.png" id="key3" class="key3">
-        <div class="spider"></div>
+
+<form id = "lpgin"action="/Player Profile" method="post">
+
+  <fieldset>
+      <legend id = 'message'>Welcome to Escape from The Iron Yard!</legend>
+
+    <div class = "name">
+        <label for="name">Player's Name:</label>
+        <input type="text" id="username" />
     </div>
-    <div id="door"></div>
-    <div id="trash">
-      <img src="images/key1.png" id="key1" class="key">
-        </div>
-    <div id="toilet">
-      <img src="images/key2.png" id="key2" class="key">
-        </div>
-    <div id="mirror" onclick="playSound('images/mirrorbreaking.wav')"><span id="sound"></span></div>
-    <div id="sink"></div>
+
+    <p>Pick a level of play:</br>
+      <input type="radio" name="level" id="radio" value="easy" />
+      <label for="easy">Easy</label>
+    </p>
+    <p>
+      <input type="radio" name="level" id="radio" value="medium" />
+      <label for="medium">Medium</label>
+    </p>
+    <p>
+      <input type="radio" name="level" id="radio" value="hard" />
+      <label for="hard">Hard</label>
+    </p>
 
 
-<!-- FIXED INVENTORY ON THE BOTTOM-->
-    <div class="bottomWrap">
-      <div id="message">Start clicking.</div>
-      <div id="inv">
-        <progress value="0" max="4"></progress>
-      </div>
-      <!-- <div class="intro">
-        TEST TEST TEST TEST
-          </div> -->
-  </div>
-  <div class="roach"></div>
-</div>
+  </fieldset>
+
+      <div class="button">
+        <button type="submit">Go!</button>
+          </div>
+
+</form>
+
+
+
 
 
 
