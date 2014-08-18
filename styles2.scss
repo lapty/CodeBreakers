@@ -209,7 +209,7 @@ background-image:url("images/rug.jpeg")
 footer{
     position:fixed;
     left:1016px;
-    bottom:0px;
+    top:0px;
     height:400px;
     width:245px;
     border:1px red solid;
@@ -221,6 +221,10 @@ footer{
   height:170px;
   border:1px red solid;
 
+  span {
+    color:red;
+    font-size:.7em;
+  }
 }
 
 #inv {
