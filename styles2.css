@@ -200,3 +200,11 @@ progress {
   top: 160px;
   right: 159px;
   position: absolute; }
+
+.bone {
+  width:100px;
+  height:200px;
+  background-image:url("images/dog_bone-01.png");
+  background-repeat:no-repeat;
+  margin-left: 650px;
+  position:absolute; }

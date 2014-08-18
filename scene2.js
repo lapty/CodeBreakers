@@ -341,4 +341,9 @@ $(document).ready(function() {
     $(this).css('background-image', 'url(images/bowlfull.png)');
   });
 
+  ///Susie's flare
+  $('.bone').on("click", function (event) {
+    message('Snips says to keep your paws off her stuff!');
+  });
+
 });
