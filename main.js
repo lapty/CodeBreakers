@@ -1,10 +1,13 @@
 $(document).ready(function(){
 
+$(".name").on("click", function (){
+    console.log("name field was clicked")
 
+});
 
 $("#button").on("click",function (){
 
-  var userName = $(this).closest('fieldset').children('.name').find('#username').text(string);
+  var userName = $(this).closest('fieldset').children('.name').find('#username').text();
   var level = $(this).closest('fieldset').children('.levelGroup').find('input').val();
 
   if (level === "easy" ){
@@ -25,11 +28,11 @@ $("#button").on("click",function (){
 
 
 
-}):
+});
 
 
 
 
 
 
-}): end of document
+}); //end of document
