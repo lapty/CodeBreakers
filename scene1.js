@@ -13,13 +13,13 @@ $(document).ready(function() {
   var progress = 0;
   var proString;
   var collect = function (item) {
-    $('#message').html("The " + item + " has been moved to your inventory.");
+    $('#message').html('The ' + item + ' has been moved to your inventory. <br/> <span> </span>');
   };
   var $message = function (text) {
     console.log('message start');
-    $('.container').find('#message').html(text + '<br/> <span> </span>');
+    $('footer').find('#message').html(text + '<br/> <span> </span>');
     console.log('message end');
-  };
+  }
 
 
 /////////////////////////////////////////////////////////////////////////////
