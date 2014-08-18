@@ -13,7 +13,7 @@ $(document).ready(function() {
   var progress = 0;
   var proString;
   var collect = function (item) {
-    $('#message').text("The " + item + " has been moved to your inventory.");
+    $('#message').children("p").text("The " + item + " has been moved to your inventory.");
   };
 
 
