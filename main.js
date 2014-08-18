@@ -4,8 +4,8 @@ $(document).ready(function(){
 
 $("#button").on("click",function (){
 
-  var userName = $(this).siblings('fieldset').find("#username").text(string);
-  var level = $(this).siblings('fieldset').find("#radio").val(string);
+  var userName = $(this).closest('fieldset').children('.name').find('#username').text(string);
+  var level = $(this).closest('fieldset').children('.levelGroup').find('input').val();
 
   if (level === "easy" ){
     window.location.href = "scene1_easy.html";
