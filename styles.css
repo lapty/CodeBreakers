@@ -1,6 +1,8 @@
 
 body{
 background-image:url("images/walls.png");
+margin:0px;
+padding:0px;
 
 }
 form{
@@ -54,16 +56,29 @@ input{
   color: white;
   width: 100px;
   margin-top:25px;
-  border-radius:25%;
+  border-radius:5px;
   cursor:pointer;
 }
 
 #button:hover {
   background-color:gray;
+  color:red;
 }
 
-#snips{
+#image{
   display:inline-block;
-  position:absolute;
-  bottom:200px;
+}
+
+header{
+  background-color:red;
+  height:100px;
+  text-align:center;
+  margin-top:-25px;
+  box-shadow: 10px 5px 5px black;
+}
+
+h1{
+  font-family: 'Play', sans-serif;
+  color:white;
+  padding-top:25px;
 }
