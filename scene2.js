@@ -17,6 +17,15 @@ var proString;
 var doorClick = false;
 var lights = 'on';
 
+var collect = function (item) {
+  $('#message').html('The ' + item + ' has been moved to your inventory. <br/> <span> </span>');
+};
+var message = function (text) {
+  console.log('message start');
+  $('footer').find('#message').html(text + '<br/> <span> </span>');
+  console.log('message end');
+};
+
 /** RUN ON DOCUMENT READY **/
 $(document).ready(function() {
 
@@ -34,14 +43,12 @@ $(document).ready(function() {
   // var bowl = false;
   // var template = "";
   // var w = true;
-  var message = function(string) {
-    $('body').children('footer').find('#message').text(string);
-  };
+
   var collectSingular = function (item) {
-    $('#message').text("The " + item + " has been moved to your inventory.");
+    $('footer').find('#message').html('The ' + item + ' has been moved to your inventory.<br/> <span> </span>');
   };
   var collectPlural = function (item) {
-    $('#message').text("The " + item + " has been moved to your inventory.");
+    $('footer').find('#message').html('The " + item + " have been moved to your inventory.<br/> <span> </span>');
   };
 
   ///////////////////////////////////////////////////////////////
@@ -346,4 +353,5 @@ $(document).ready(function() {
     $(this).css('background-image', 'url(images/bowlfull.png)');
   });
 
+  Tick();
 });

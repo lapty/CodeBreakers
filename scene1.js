@@ -19,7 +19,7 @@ $(document).ready(function() {
     console.log('message start');
     $('footer').find('#message').html(text + '<br/> <span> </span>');
     console.log('message end');
-  }
+  };
 
 
 /////////////////////////////////////////////////////////////////////////////
