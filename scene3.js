@@ -26,7 +26,7 @@ $(document).ready(function() {
       window.location.href = 'http://coastalexpeditions.com/';
     }
     else {
-      alert('WRONG. YOU ARE STUCK HERE FOREVER!);
+      alert('WRONG. YOU ARE STUCK HERE FOREVER!');
       console.log('back to level 1');
       window.location.href = 'index.html';
     }
