@@ -3,7 +3,7 @@ console.log('run scene 2');
 var door2 = false;
 var lockers = false;
 var fireplace = false;
-var snips = false;
+var snips = true;
 var snipsIs = 'unfed';
 var key4 = false;
 var key4inv = false;
@@ -186,16 +186,16 @@ $(document).ready(function() {
   /** SNIPS EVENTS **/
   $('#floor').on('click', '.snips', function(event) {
     event.preventDefault();
-    //Fire is not lit snips is too cold to move
-    if(snips === false) {
-      console.log('snips sleep start');
-      message("GRRRRR -- translation -- CHECK YOURSELF FOOL, BACK AWAY FROM MY WARM MAT");
-      console.log('snips sleep end');
-    }
-    //fire is lit but snips is hungry
-    else if (snips === true && snipsIs === 'fed' && !key4inv) {
+    // //Fire is not lit snips is too cold to move
+    // if(snips === false) {
+    //   console.log('snips sleep start');
+    //   message("GRRRRR -- translation -- CHECK YOURSELF FOOL, BACK AWAY FROM MY WARM MAT");
+    //   console.log('snips sleep end');
+    // }
+    // //fire is lit but snips is hungry
+    if (snips === true && snipsIs === 'fed' && !key4inv) {
       console.log('snips fed then awake start');
-      message("Woof Ruff Woof Woof *wag* bark! -- translation -- It\'s warm, you fed me, here\'s a key!");
+      message("Woof Ruff Woof Woof *wag* bark! -- translation -- Yeah, you fed me, here\'s a key!");
       key4 = true;
       template = "<div class=\"keys\" id=\"key4\"><img src=\"images/key4.png\" alt=\"picture of key one\"></div>";
       console.log('template made');
@@ -206,7 +206,8 @@ $(document).ready(function() {
       progress++;
       proString = progress.toString();
       console.log(proString);
-      $(this).closest('.container').siblings('footer').children('.bottomWrap').find('progress').val(proString);
+
+        $(this).closest('.container').siblings('footer').children('.bottomWrap').find('progress').val(proString);
       console.log('change progress bar');
     }
     //fire is lit but snips is hungry
