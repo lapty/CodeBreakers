@@ -353,5 +353,8 @@ $(document).ready(function() {
     $(this).css('background-image', 'url(images/bowlfull.png)');
   });
 
+
+
   Tick();
+
 });

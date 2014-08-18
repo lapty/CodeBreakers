@@ -8,7 +8,7 @@ $(document).ready(function() {
   /**  variables to be used later on**/
   var key1 = false;
   var key2 = false;
-  var key3 = false;
+  //var key3 = false;
   var leave = false;
   var progress = 0;
   var proString;
@@ -24,7 +24,8 @@ $(document).ready(function() {
     // IF ALL KEYS IN INV
     if (key1 && key2 && key3 && !leave) {
       $(this).closest('.container').find('#message').text("Phew! You made it. Let's move on (click to leave)");
-      console.log("key1 " + key1 + ", key2 " + key2 + ", key3 " + key3);
+      console.log("key1 " + key1 + ", key2 " + key2);
+      //console.log("key1 " + key1 + ", key2 " + key2 + ", key3 " + key3);
       leave = true;
       progress++;
       proString = progress.toString();
@@ -33,18 +34,23 @@ $(document).ready(function() {
       console.log('change progress bar');
     }
     //Click again to leave room
-    else if (key1 && key2 && key3 && leave) {
+    //else if (key1 && key2 && key3 && leave) {
+    else if (key1 && key2 && leave) {
       window.location.href = 'scene2.html';
     }
     // IF ONE OR MORE KEYS IN INV
-    else if (key1 || key2 || key3) {
+    //else if (key1 || key2 || key3) {
+    else if (key1 || key2) {
       $(this).closest('.container').find('#message').text("The door is only partially unlocked and will not open.");
-      console.log("key1 " + key1 + ", key2 " + key2 + ", key3 " + key3);
+      //console.log("key1 " + key1 + ", key2 " + key2 + ", key3 " + key3);
+      console.log("key1 " + key1 + ", key2 " + key2);
     }
     // IF NO KEYS IN INV
     else {
       $(this).closest('.container').find('#message').text("The door is locked.  Find a way to open it");
-      console.log("key1 " + key1 + ", key2 " + key2 + ", key3 " + key3);
+      console.log("key1 " + key1 + ", key2 " + key2);
+      //console.log("key1 " + key1 + ", key2 " + key2 + ", key3 " + key3);
+
     }
   });
 //Double clicking the door does nothing
@@ -95,24 +101,24 @@ $(document).ready(function() {
 
   });
 
-  /** KEY3 **/
-  $('.container').on('click', '#key3', function(event) {
-    console.log('key3 start');
-    key3 = true;
-    $(this).css('display', 'none');
-    collect('key');
-
-    var template = "<div class=\"keys\" id=\"key3\"><img src=\"images/key3.png\" alt=\"picture of key three\"></div>";
-    console.log(template);
-    $(this).closest('.container').find('#inv').append(template);
-    console.log('template placed');
-    progress++;
-    proString = progress.toString();
-    console.log(proString);
-    $(this).closest('.container').children('.bottomWrap').find('progress').val(proString);
-    console.log('change progress bar');
-
-  });
+  // /** KEY3 **/
+  // $('.container').on('click', '#key3', function(event) {
+  //   console.log('key3 start');
+  //   key3 = true;
+  //   $(this).css('display', 'none');
+  //   collect('key');
+  //
+  //   var template = "<div class=\"keys\" id=\"key3\"><img src=\"images/key3.png\" alt=\"picture of key three\"></div>";
+  //   console.log(template);
+  //   $(this).closest('.container').find('#inv').append(template);
+  //   console.log('template placed');
+  //   progress++;
+  //   proString = progress.toString();
+  //   console.log(proString);
+  //   $(this).closest('.container').children('.bottomWrap').find('progress').val(proString);
+  //   console.log('change progress bar');
+  // 
+  // });
 
 /////////////////////////////////////////////////////////////////////////////
 
