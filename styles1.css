@@ -1,0 +1,160 @@
+body {
+  font-family: helvetica;
+  font-size: 2.4em;
+  background-image: url("images/stripes.png");
+  color: white;
+  -webkit-text-stroke-width: 1.7px;
+  -webkit-text-stroke-color: black; }
+
+.intro {
+  position: absolute;
+  width: 130px;
+  height: 665px;
+  top: 0px;
+  left: 0px;
+  color: white;
+  background-color: black;
+  opacity: 0.9; }
+
+.container {
+  display: inline-block;
+  width: 1000px;
+  height: 632px;
+  padding: 0px;
+  position: relative;
+  margin-left: 10%;
+  border-radius: 10px;
+  margin-right: 10%;
+  border: 5px black solid;
+  background-image: url("images/walls.png"); }
+
+#shelf {
+  display: inline-block;
+  width: 1000px;
+  position: absolute;
+  margin-top: 30px;
+  background-image: url("images/shelf.png");
+  background-repeat: no-repeat;
+  height: 50px; }
+  #shelf .spider {
+    background-image: url("images/spider-01.png");
+    position: absolute;
+    width: 126px;
+    height: 169px;
+    top: 14px;
+    right: 0px; }
+
+.plantBox {
+  display: inline-block;
+  margin-left: 50%;
+  margin-top: -28px; }
+
+#door {
+  display: inline-block;
+  width: 250px;
+  margin-top: 118px;
+  margin-left: 30px;
+  background-image: url("images/door1.png");
+  background-repeat: no-repeat;
+  height: 362px; }
+
+#trash {
+  display: inline-block;
+  position: absolute;
+  bottom: 124px;
+  width: 121px;
+  height: 130px;
+  background-image: url("images/trash.png");
+  background-repeat: no-repeat;
+  vertical-align: bottom; }
+
+#toilet {
+  display: inline-block;
+  position: absolute;
+  width: 217px;
+  height: 238px;
+  bottom: 119px;
+  right: 0px;
+  background-image: url("images/toilet2.png");
+  background-repeat: no-repeat; }
+
+#mirror {
+  position: absolute;
+  top: 150px;
+  left: 560px;
+  width: 126px;
+  height: 169px;
+  background-image: url("images/mirror2.png"); }
+
+#sink {
+  position: absolute;
+  top: 320px;
+  left: 547px;
+  width: 152px;
+  height: 202px;
+  background-image: url("images/sink.png"); }
+
+.roach {
+  position: absolute;
+  top: 479px;
+  left: 131px;
+  width: 200px;
+  height: 200px;
+  background-image: url("images/roach.png");
+  background-repeat: no-repeat;
+  transition: left 2s ease; }
+
+.roach:hover {
+  left: 1000px; }
+
+.bottomWrap {
+  position: relative;
+  width: 100%;
+  height: 142px; }
+
+#message {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  text-align: center; }
+
+#inv {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background-color: gray;
+  opacity: 0.5; }
+
+progress {
+  background-color: green;
+  border: 2px solid black;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 3px;
+  right: 3px; }
+
+.keys {
+  display: inline-block; }
+
+.key {
+  display: none;
+  position: relative;
+  width: 30%;
+  height: 30%; }
+
+.key3 {
+  display: none;
+  margin-left: 52%;
+  margin-top: -47px;
+  width: 20px; }
+
+#key1 {
+  bottom: 27px;
+  left: 44px; }
+
+#key2 {
+  top: 60px;
+  left: 100px;
+  width: 27px;
+  height: 50px; }
