@@ -212,14 +212,14 @@ footer{
     top:0px;
     height:400px;
     width:245px;
-    border:1px red solid;
 }
 
 #message {
   display:inline-block;
   width:85%;
   height:170px;
-  border:1px red solid;
+  font-size: 1.3em;
+  margin: 12px;
 
   span {
     color:red;
@@ -233,7 +233,6 @@ footer{
   height:100px;
   background-color:gray;
   opacity:.5;
-  border:1px red solid;
   padding-bottom: 100%;
 
 }

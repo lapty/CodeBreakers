@@ -123,50 +123,43 @@ vertical-align: bottom;
 }
 
 //BOTTOM
-footer{
-    position:fixed;
-    left:1016px;
-    top:0px;
-    height:400px;
-    width:245px;
-    border:1px red solid;
-}
+footer {
+  position: fixed;
+  left: 1016px;
+  top: 0px;
+  height: 500px;
+  width: 245px;
+   }
 
 #message {
-  display:inline-block;
-  width:85%;
-  height:170px;
-  border:1px red solid;
-
-  span {
-    color:red;
-    font-size:.7em;
+  display: inline-block;
+  width: 85%;
+  height: 225px;
+  margin: 12px;
   }
+  #message span {
+    color: red;
+    font-size: 0.7em; }
 
-}
 
 #inv {
-  display:inline-block;
-  width:100%;
-  height:100px;
-  background-color:gray;
-  opacity:.5;
-  border:1px red solid;
-  padding-bottom: 100%;
-
-}
-
+  display: inline-block;
+  width: 100%;
+  height: 100px;
+  background-color: gray;
+  opacity: 0.5;
+  padding-bottom: 100%; }
 
 progress {
-  background-color:green;
-  border:2px solid black;
-  border-radius:5px;
-  position:absolute;
-  bottom:3px;
-  right:3px;
+  background-color: green;
+  border: 2px solid black;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
   width: 239px;
+  }
 
-}
 
 //KEYS
 

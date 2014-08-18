@@ -26,16 +26,24 @@ body {
 }
 
 #lockdown {
-  border:1px red solid;
+
   top:95px;
   width:1000px;
   height:500px;
   position:absolute;
   background-image:url("images/lockdown.png");
-////////////////HIDE LOCKDOWN
-  display:none;
 
 }
+
+#door {
+  left: 317px;
+  top: 210px;
+  width: 344px;
+  height: 373px;
+  position:absolute;
+
+}
+
 
 ///INVENTORY
 
@@ -43,18 +51,20 @@ footer {
   position: fixed;
   left: 1016px;
   top: 0px;
-  height: 800px;
+  height: 500px;
   width: 245px;
-  border: 1px red solid; }
+   }
 
 #message {
   display: inline-block;
   width: 85%;
-  height: 170px;
-  border: 1px red solid; }
+  height: 225px;
+  margin: 12px;
+  }
   #message span {
     color: red;
     font-size: 0.7em; }
+
 
 #inv {
   display: inline-block;
@@ -62,7 +72,6 @@ footer {
   height: 100px;
   background-color: gray;
   opacity: 0.5;
-  border: 1px red solid;
   padding-bottom: 100%; }
 
 progress {
@@ -72,4 +81,26 @@ progress {
   position: absolute;
   bottom: 3px;
   right: 3px;
-  width: 239px; }
+  width: 239px;
+  }
+
+
+
+//KEYS
+
+.keys {
+  display:inline-block;
+}
+
+.key {
+  display:none;
+  position:relative;
+}
+
+#key5 {
+  width:30px;
+  height:40px;
+  top: 594px;
+  right: 159px;
+  position: absolute;
+}

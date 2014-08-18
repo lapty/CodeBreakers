@@ -9,9 +9,11 @@
 </form> */
 body {
   font-family: helvetica;
-  font-size: 1.5em;
-  color: red;
-  background-image: url("images/stripes.png"); }
+  font-size: 2.4em;
+  background-image: url("images/stripes.png");
+  color: white;
+  -webkit-text-stroke-width: 1.7px;
+  -webkit-text-stroke-color: black; }
 
 .container {
   display: inline-block;
@@ -24,7 +26,7 @@ body {
   margin-right: 10%;
   border: 3px black solid;
   text-align: center;
-  background-image: url("images/scene3bg.png"); }
+  background-image: url("images/scene4bg.png"); }
   .container #lock {
     position: inline-block;
     margin-top: 148px;

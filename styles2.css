@@ -166,14 +166,14 @@ footer {
   left: 1016px;
   top: 0px;
   height: 400px;
-  width: 245px;
-  border: 1px red solid; }
+  width: 245px; }
 
 #message {
   display: inline-block;
   width: 85%;
   height: 170px;
-  border: 1px red solid; }
+  font-size: 1.3em;
+  margin: 12px; }
   #message span {
     color: red;
     font-size: 0.7em; }
@@ -184,7 +184,6 @@ footer {
   height: 100px;
   background-color: gray;
   opacity: 0.5;
-  border: 1px red solid;
   padding-bottom: 100%; }
 
 progress {
@@ -209,11 +208,3 @@ progress {
   top: 160px;
   right: 159px;
   position: absolute; }
-
-.bone {
-  width:100px;
-  height:200px;
-  background-image:url("images/dog_bone-01.png");
-  background-repeat:no-repeat;
-  margin-left: 650px;
-  position:absolute; }
