@@ -17,42 +17,47 @@ function playSound(soundfile) {
   <body>
 
     <div class="container">
-    <div id="shelf">
+
+      <div id="shelf">
         <div class="plantBox">
           <img src="images/plant.png" width=70px height=60px>
-            </div>
+        </div>
         <img src="images/key3.png" id="key3" class="key3">
         <div class="spider"></div>
-    </div>
-    <div id="door"></div>
-    <div id="trash">
-      <img src="images/key1.png" id="key1" class="key">
-        </div>
-    <div id="toilet">
-      <img src="images/key2.png" id="key2" class="key">
-        </div>
-    <div id="mirror" onclick="playSound('images/mirrorbreaking.wav')"><span id="sound"></span></div>
-    <div id="sink"></div>
-
-<!-- FIXED INVENTORY ON THE BOTTOM-->
-    <div class="bottomWrap">
-
-      <div id="inv">
-        <progress value="0" max="4"></progress>
       </div>
-      <div id="message">Start clicking.</div>
-      <!-- <div class="intro">
-        TEST TEST TEST TEST
-          </div> -->
-  </div>
-  <div class="roach"></div>
-</div>
+
+      <div id="door"></div>
+
+      <div id="trash">
+        <img src="images/key1.png" id="key1" class="key">
+      </div>
+      <div id="toilet">
+        <img src="images/key2.png" id="key2" class="key">
+      </div>
+
+      <div id="mirror" onclick="playSound('images/mirrorbreaking.wav')"><span id="sound"></span></div>
+
+      <div id="sink"></div>
+
+      <div class="roach"></div>
+
+    </div>
+
+    <footer>
+      <div class="bottomWrap">
+        <div id="message">Start clicking. <br/> <span id="lifebar"> <!-- LIFE GOES HERE --></span></div>
+        <div id="inv">
+          <progress value = "0" max="4"></progress>
+        </div>
+      </div>
+    </footer>
 
 
 
 <!-- Script tags for jquery and no underscore -->
   <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
-  <script type="text/javascript" src="scene1_easy.js"></script>
+  <script type="text/javascript" src="data.js"></script>
+  <script type="text/javascript" src="scene1.js"></script>
 
   </body>
 </html>

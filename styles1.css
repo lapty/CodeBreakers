@@ -107,8 +107,8 @@ body {
 footer {
   position: fixed;
   left: 1016px;
-  bottom: 0px;
-  height: 400px;
+  top: 0px;
+  height: 800px;
   width: 245px;
   border: 1px red solid; }
 
@@ -117,6 +117,9 @@ footer {
   width: 85%;
   height: 170px;
   border: 1px red solid; }
+  #message span {
+    color: red;
+    font-size: 0.7em; }
 
 #inv {
   display: inline-block;
