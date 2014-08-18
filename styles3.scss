@@ -25,6 +25,17 @@ body {
   left: 276px;
 }
 
+#lockdown {
+  border:1px red solid;
+  top:95px;
+  width:1000px;
+  height:500px;
+  position:absolute;
+  background-image:url("images/lockdown.png");
+////////////////HIDE LOCKDOWN
+  display:none;
+
+}
 
 ///INVENTORY
 
