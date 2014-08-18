@@ -60,10 +60,11 @@ footer {
   width: 85%;
   height: 225px;
   margin: 12px;
-   }
+  }
   #message span {
     color: red;
     font-size: 0.7em; }
+
 
 #inv {
   display: inline-block;
@@ -71,7 +72,6 @@ footer {
   height: 100px;
   background-color: gray;
   opacity: 0.5;
-
   padding-bottom: 100%; }
 
 progress {
@@ -81,7 +81,8 @@ progress {
   position: absolute;
   bottom: 3px;
   right: 3px;
-  width: 239px; }
+  width: 239px;
+  }
 
 
 

@@ -108,18 +108,18 @@ footer {
   position: fixed;
   left: 1016px;
   top: 0px;
-  height: 800px;
-  width: 245px;
-  border: 1px red solid; }
+  height: 500px;
+  width: 245px; }
 
 #message {
   display: inline-block;
   width: 85%;
-  height: 170px;
-  border: 1px red solid; }
-  #message span {
-    color: red;
-    font-size: 0.7em; }
+  height: 225px;
+  margin: 12px; }
+
+#message span {
+  color: red;
+  font-size: 0.7em; }
 
 #inv {
   display: inline-block;
@@ -127,7 +127,6 @@ footer {
   height: 100px;
   background-color: gray;
   opacity: 0.5;
-  border: 1px red solid;
   padding-bottom: 100%; }
 
 progress {
