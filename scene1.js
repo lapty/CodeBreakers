@@ -13,7 +13,12 @@ $(document).ready(function() {
   var progress = 0;
   var proString;
   var collect = function (item) {
-    $('#message').text("The " + item + " has been moved to your inventory.");
+    $('#message').html("The " + item + " has been moved to your inventory.");
+  };
+  var $message = function (text) {
+    console.log('message start');
+    $('.container').find('#message').html(text + '<br/> <span> </span>');
+    console.log('message end');
   };
 
 
@@ -23,7 +28,7 @@ $(document).ready(function() {
     event.preventDefault();
     // IF ALL KEYS IN INV
     if (key1 && key2 && key3 && !leave) {
-      $(this).closest('.container').find('#message').text("Phew! You made it. Let's move on (click to leave)");
+      $message("Phew! You made it. Let's move on (click to leave)");
       console.log("key1 " + key1 + ", key2 " + key2 + ", key3 " + key3);
       leave = true;
       progress++;
@@ -38,19 +43,19 @@ $(document).ready(function() {
     }
     // IF ONE OR MORE KEYS IN INV
     else if (key1 || key2 || key3) {
-      $(this).closest('.container').find('#message').text("The door is only partially unlocked and will not open.");
+      $message("The door is only partially unlocked and will not open.");
       console.log("key1 " + key1 + ", key2 " + key2 + ", key3 " + key3);
     }
     // IF NO KEYS IN INV
     else {
-      $(this).closest('.container').find('#message').text("The door is locked.  Find a way to open it");
+      $message("The door is locked.  Find a way to open it");
       console.log("key1 " + key1 + ", key2 " + key2 + ", key3 " + key3);
     }
   });
 //Double clicking the door does nothing
   $('.container').on('dblclick', '#door', function(event) {
     event.preventDefault();
-    $(this).closest('.container').find('#message').text("Pulling harder won't help.  Find another way.");
+    $message("Pulling harder won't help.  Find another way.");
     console.log('door dbl click end');
   });
 
@@ -133,7 +138,7 @@ console.log("k is " +k);
     event.preventDefault();
     if (toilet === false) {
       console.log('Congrats, you touched a digital toilet.');
-      $(this).closest('.container').find('#message').text("You put your hand in the toilet. Someone forgot to flush.");
+      $message("You put your hand in the toilet. Someone forgot to flush.");
       $(this).children('.key').fadeIn();
       toilet = true;
     }
@@ -141,7 +146,7 @@ console.log("k is " +k);
       toilet = 3;
     }
     else {
-      $(this).closest('.container').find('#message').text("Stop touching the toilet, that's weird.");
+      $message("Stop touching the toilet, that's weird.");
     }
   });
 
@@ -150,7 +155,7 @@ console.log("k is " +k);
     event.preventDefault();
     if (trash === false) {
       console.log('Sticky');
-      $(this).closest('.container').find('#message').text("Another man's treasure.");
+      $message("Another man's treasure.");
       $(this).children('.key').fadeIn();
       trash = true;
     }
@@ -182,21 +187,23 @@ console.log("k is " +k);
 /////////////////////////////////////////////////////////////CHARLES' SECTION
     $('#mirror').on('click', function(event){
       $(this).css('background-image', 'url(images/mirrror-01.png)'),
-      $(this).closest('.container').find('#message').text("You broke the mirror. Good job.");
+      $message("You broke the mirror. Good job.");
     });
 
     $('#sink').on('click', function(event){
-      $(this).closest('.container').find('#message').text("Will Gallop doesn't wash his hands.")
+      $message("Will Gallop doesn't wash his hands.")
     });
 
     $('.spider').on('click', function(event){
-      $(this).closest('.container').find('#message').text("Leave his home alone.")
+      $message("Leave his home alone.")
     });
 
     $('.roach').on('click', function(event) {
-      $(this).closest('.container').find('#message').text("You crushed the cockroach and ate it.");
+      $message("You crushed the cockroach and ate it.");
       $(this).css('display','none');
     });
+
+  Tick();
 
 //END OF READY
 });

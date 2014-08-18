@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles1.css">
   <meta charset="UTF-8">
   <title>Can you escape The Iron Yard?</title>
 
@@ -36,7 +36,7 @@ function playSound(soundfile) {
 
 <!-- FIXED INVENTORY ON THE BOTTOM-->
     <div class="bottomWrap">
-      <div id="message">Start clicking.</div>
+      <div id="message">Start clicking. <br/> <span> <!-- LIFE GOES HERE --></span></div>
       <div id="inv">
         <progress value="0" max="4"></progress>
       </div>
@@ -51,7 +51,8 @@ function playSound(soundfile) {
 
 <!-- Script tags for jquery and no underscore -->
   <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
-  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="data.js"></script>
+  <script type="text/javascript" src="scene1.js"></script>
 
   </body>
 </html>
