@@ -1,34 +1,69 @@
 
 body{
-
+background-image:url("images/walls.png");
 
 }
 form{
-border: 1px solid black;
+border: 14px solid black;
+width:650px;
+border-radius:5%;
+margin:0 auto;
+margin-top: 150px;
+background-color:white;
+height:450px;
 
 }
 
 fieldset{
-  border: 1px solid red;
+  width:500px;
+  height:350px;
+  margin-bottom:20px;
+  font-family: 'Play', sans-serif;
+  font-size:20px;
+  position:relative;
+  margin: 25px auto;
+
 
 }
 
 legend{
-  border: 1px solid yellow;
+  font-size:28px;
+  color:red;
 
 }
 
-.name{
-  border: 1px solid teal;
+.levelGroup{
+position:relative;
+margin-left:150px;
 
 }
 
-label{
-  border: 1px solid pink;
+.levelGroup label{
+  color:red;
 
 }
 
 input{
-  border: 1px solid magenta;
+  background-color:lightgray;
+}
 
+#button{
+  background-color:red;
+  text-align:center;
+  text-align: center;
+  color: white;
+  width: 100px;
+  margin-top:25px;
+  border-radius:25%;
+  cursor:pointer;
+}
+
+#button:hover {
+  background-color:gray;
+}
+
+#snips{
+  display:inline-block;
+  position:absolute;
+  bottom:200px;
 }

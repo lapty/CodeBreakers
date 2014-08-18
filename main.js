@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
 
-$("button").on("click",function (){
+$("#button").on("click",function (){
 
   var userName = $(this).siblings('fieldset').find("#username").text(string);
   var level = $(this).siblings('fieldset').find("#radio").val(string);
@@ -22,7 +22,7 @@ $("button").on("click",function (){
     console.log("go to hard scene1");
   }
 
-  else()
+
 
 
 }):
