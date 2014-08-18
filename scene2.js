@@ -329,6 +329,11 @@ $(document).ready(function() {
     message('Sweet moves.');
   });
 
+  $('#table2').on("click", function (event) {
+    $(this).children(".laptop").children("#code").css('display','block')
+    message('What a random assortment of numbers.');
+  });
+
   $('.logo').on("click", function (event) {
     message('The Iron Yard, where people come to cry silently.');
   });
