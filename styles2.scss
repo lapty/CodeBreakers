@@ -1,11 +1,11 @@
 body {
   font-family:helvetica;
-  font-size:2.5em;
+  font-size:2em;
   background-image:url("images/stripes.png");
-  color:white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  color:black;
+  display:inline-block;
 }
+
 
 
 .lightOff {
@@ -28,9 +28,7 @@ body {
   width:1000px;
   height:1000px;
   padding:0px;
-  margin-left:10%;
   border-radius:6px;
-  margin-right:10%;
   border:3px black solid;
   background-image:url("images/scene2bg.jpg");
 }
@@ -47,7 +45,7 @@ body {
   width:1000px;
   height:650px;
   padding:0px;
-
+  ;
 }
 
 .logo {
@@ -55,8 +53,8 @@ body {
   display:inline-block;
   width:300px;
   height:300px;
-right: 44px;
-top: 105px;
+  right: 44px;
+  top: 105px;
 
   background-image:url("images/tiy_logo.png");
 }
@@ -133,6 +131,7 @@ left: 26px;
 
 //FLOOR
 .floor{
+  ;
   display:inline-block;
   width:1000px;
   height:300px;
@@ -209,18 +208,23 @@ background-image:url("images/rug.jpeg")
 //BOTTOM
 footer{
     position:fixed;
-    left:0px;
-    bottom:0px;
-    height:130px;
-    width:100%;
+    left:1016px;
+    top:0px;
+    height:400px;
+    width:245px;
+    border:1px red solid;
 }
 
 #message {
   display:inline-block;
-  width:100%;
-  height:30px;
-  text-align:center;
+  width:85%;
+  height:170px;
+  border:1px red solid;
 
+  span {
+    color:red;
+    font-size:.7em;
+  }
 }
 
 #inv {
@@ -229,6 +233,8 @@ footer{
   height:100px;
   background-color:gray;
   opacity:.5;
+  border:1px red solid;
+  padding-bottom: 100%;
 
 }
 

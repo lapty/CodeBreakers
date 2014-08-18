@@ -19,10 +19,10 @@ $("button").on("click",function (){
 
   else if (level === "hard"){
     window.location.href = "scene1.html";
-    console.log("go to easy scene1");
+    console.log("go to hard scene1");
   }
 
-
+  else()
 
 
 }):

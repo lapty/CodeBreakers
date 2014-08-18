@@ -1,11 +1,8 @@
 body {
   font-family:helvetica;
-  font-size:2.4em;
+  font-size:2em;
   background-image:url("images/stripes.png");
-  color:white;
-  -webkit-text-stroke-width: 1.7px;
-  -webkit-text-stroke-color: black;
-
+  color:black;
 }
 /////////////EXPERIMENT
 .intro {
@@ -22,10 +19,9 @@ body {
 .container {
   display:inline-block;
   width:1000px;
-  height:632px;
+  height:640px;
   padding:0px;
   position:relative;
-  margin-left:10%;
   border-radius:10px;
   margin-right:10%;
   border:5px black solid;
@@ -127,28 +123,39 @@ vertical-align: bottom;
 }
 
 //BOTTOM
-.bottomWrap {
-  position:relative;
-  width:100%;
-  height:142px;
+footer{
+    position:fixed;
+    left:1016px;
+    top:0px;
+    height:400px;
+    width:245px;
+    border:1px red solid;
 }
 
 #message {
   display:inline-block;
-  width:100%;
-  height:50px;
-  text-align:center;
+  width:85%;
+  height:170px;
+  border:1px red solid;
+
+  span {
+    color:red;
+    font-size:.7em;
+  }
+
 }
 
 #inv {
   display:inline-block;
-  position:relative;
   width:100%;
-  height:80px;
+  height:100px;
   background-color:gray;
   opacity:.5;
+  border:1px red solid;
+  padding-bottom: 100%;
 
 }
+
 
 progress {
   background-color:green;
@@ -157,9 +164,9 @@ progress {
   position:absolute;
   bottom:3px;
   right:3px;
+  width: 239px;
+
 }
-
-
 
 //KEYS
 
@@ -170,15 +177,14 @@ progress {
 .key {
   display:none;
   position:relative;
-  width:30%;
-  height:30%;
+  width:20%;
+  height:20%;
 }
 
 .key3 {
   display:none;
   margin-left: 52%;
   margin-top: -47px;
-  width:20px;
 }
 
 #key1 {
