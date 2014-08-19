@@ -202,7 +202,7 @@ $(document).ready(function() {
     //fire is lit but snips is hungry
     else if (snips === true && snipsIs === 'fed' && !key4inv) {
       console.log('snips fed then awake start');
-      message("Woof Ruff Woof Woof *wag* bark! -- translation -- It\'s warm, you fed me, here\'s a key!");
+      message("Woof *wag* bark! translation: It\'s warm, you fed me, here\'s a key!");
       key4 = true;
       template = "<div class=\"keys\" id=\"key4\"><img src=\"images/key4.png\" alt=\"picture of key one\"></div>";
       console.log('template made');
