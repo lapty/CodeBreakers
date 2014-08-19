@@ -20,7 +20,7 @@ $(document).ready(function() {
     code = $(this).siblings('#enterNum').val().toString();
     console.log(code);
     if (code === '7257') {
-      alert('You\'ve made it out alive, but without your dignity.');
+      alert('You\'ve made it out alive! Try hard mode for the true ending.');
       console.log('move to win');
       console.log('back to level 1');
       window.location.href = 'http://coastalexpeditions.com/';

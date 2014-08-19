@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles3.css">
+  <meta charset="UTF-8">
+  <title>Can you escape The Iron Yard?</title>
+</head>
+  <body>
+
+    <div class="container">
+      <div id="lockdown" style="display:none"></div>
+      <div id="fan"></div>
+      <div id="door"></div>
+
+      <img src="images/key5.png" id="key5" class="key">
+    </div>
+
+
+    <footer>
+      <div class="bottomWrap">
+        <div id="message">Start clicking. <br/> <span id="lifebar"> <!-- LIFE GOES HERE --></span></div>
+        <div id="inv">
+          <progress value = "0" max="4"></progress>
+        </div>
+      </div>
+    </footer>
+
+
+
+<!-- Script tags for jquery and no underscore -->
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="data.js"></script>
+  <script type="text/javascript" src="scene3_medium.js"></script>
+
+  </body>
+</html>
