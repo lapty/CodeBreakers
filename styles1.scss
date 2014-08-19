@@ -127,9 +127,8 @@ footer {
   position: fixed;
   left: 1016px;
   top: 0px;
-  height: 500px;
-  width: 245px;
-   }
+  height: 100%;
+  width: 245px; }
 
 #message {
   display: inline-block;
@@ -176,21 +175,20 @@ progress {
 
 .key3 {
   display:none;
-  margin-left: 52%;
-  margin-top: -47px;
+  position: absolute;
+left: 530px;
+  width: 27px;
+  height: 50px;
 }
 
 #key1 {
   bottom: 27px;
-left: 44px;
-
+  left: 44px;
 }
 
 #key2 {
-  top: 60px;
+  top: 73px;
   left: 100px;
   width: 27px;
   height: 50px;
-
-
 }

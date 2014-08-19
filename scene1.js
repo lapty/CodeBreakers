@@ -15,6 +15,7 @@ $(document).ready(function() {
   var collect = function (item) {
     $('#message').html('The ' + item + ' has been moved to your inventory. <br/> <span> </span>');
   };
+
   var $message = function (text) {
     console.log('message start');
     $('footer').find('#message').html(text + '<br/> <span> </span>');
@@ -69,14 +70,16 @@ $(document).ready(function() {
     $(this).css('display', 'none');
     collect('key');
 
-    var template = "<div class=\"keys\" id=\"key1\"><img src=\"images/key1.png\" alt=\"picture of key one\"></div>";
-    console.log(template);
-    $(this).closest('.container').find('#inv').append(template);
+    template = "<div class=\"keys\"><img src=\"images/key1.png\" alt=\"picture of key five\"></div>";
+    $(this).closest('.container').siblings('footer').find('#inv').append(template);
+    key1inv = true;
     console.log('template placed');
+    console.log('end key1 event');
+    //Increment progress by one
     progress++;
     proString = progress.toString();
     console.log(proString);
-    $(this).closest('.container').children('.bottomWrap').find('progress').val(proString);
+    $(this).closest('.container').siblings('footer').children('.bottomWrap').find('progress').val(proString);
     console.log('change progress bar');
 
   });
@@ -88,14 +91,16 @@ $(document).ready(function() {
     $(this).css('display', 'none');
     collect('key');
 
-    var template = "<div class=\"keys\" id=\"key2\"><img src=\"images/key2.png\" alt=\"picture of key two\"></div>";
-    console.log(template);
-    $(this).closest('.container').find('#inv').append(template);
+    template = "<div class=\"keys\"><img src=\"images/key2.png\" alt=\"picture of key five\"></div>";
+    $(this).closest('.container').siblings('footer').find('#inv').append(template);
+    key2inv = true;
     console.log('template placed');
+    console.log('end key2 event');
+    //Increment progress by one
     progress++;
     proString = progress.toString();
     console.log(proString);
-    $(this).closest('.container').children('.bottomWrap').find('progress').val(proString);
+    $(this).closest('.container').siblings('footer').children('.bottomWrap').find('progress').val(proString);
     console.log('change progress bar');
 
   });
@@ -107,18 +112,19 @@ $(document).ready(function() {
     $(this).css('display', 'none');
     collect('key');
 
-    var template = "<div class=\"keys\" id=\"key3\"><img src=\"images/key3.png\" alt=\"picture of key three\"></div>";
-    console.log(template);
-    $(this).closest('.container').find('#inv').append(template);
+    template = "<div class=\"keys\"><img src=\"images/key3.png\" alt=\"picture of key five\"></div>";
+    $(this).closest('.container').siblings('footer').find('#inv').append(template);
+    key3inv = true;
     console.log('template placed');
+    console.log('end key3 event');
+    //Increment progress by one
     progress++;
     proString = progress.toString();
     console.log(proString);
-    $(this).closest('.container').children('.bottomWrap').find('progress').val(proString);
+    $(this).closest('.container').siblings('footer').children('.bottomWrap').find('progress').val(proString);
     console.log('change progress bar');
 
   });
-
 /////////////////////////////////////////////////////////////////////////////
 
   /** Displaying hidden items **/
